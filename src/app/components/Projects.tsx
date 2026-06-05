@@ -31,8 +31,8 @@ export function Projects() {
       image: "https://images.unsplash.com/photo-1762681829391-74e80741e65f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBzZWN1cml0eSUyMGxvY2slMjBtb2Rlcm4lMjB0ZWNofGVufDF8fHx8MTc4MDM1NDE1MHww&ixlib=rb-4.1.0&q=80&w=1080",
       tags: ["React", "Node.js", "MongoDB", "QR Integration"],
       metrics: ["Secured 1,000+ devices", "Zero unauthorized exits"],
-      github: "",
-      demo: ""
+      github: "https://github.com/abdisa38/MWU-laptop-exit-verifications.git",
+      demo: "https://mwu-laptop-exit-verifications.vercel.app/"
     },
   ];
 

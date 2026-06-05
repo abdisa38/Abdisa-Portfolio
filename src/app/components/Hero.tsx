@@ -301,7 +301,7 @@ I am a Full-Stack Software Engineer focused on designing, developing, and deploy
               </div>
               <div className="mx-auto glass-effect px-4 py-1.5 rounded-lg text-xs text-gray-300 font-mono flex items-center gap-2 border border-red-500/20">
                 <Terminal size={14} className="text-red-500" />
-                abdisa@cinematic:~
+                abdisa@code:~
               </div>
             </div>
 

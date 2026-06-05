@@ -206,12 +206,12 @@ I am a Full-Stack Software Engineer focused on designing, developing, and deploy
             </a>
           </motion.div>
 
-          {/* Stats Grid */}
+          {/* Stats Grid - Enhanced Visibility */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.8 }}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-red-500/20"
+            className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-10 border-t-2 border-red-500/40 mt-6"
           >
             {stats.map((stat, i) => (
               <motion.div
@@ -219,14 +219,27 @@ I am a Full-Stack Software Engineer focused on designing, developing, and deploy
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1.7 + i * 0.1, type: "spring" }}
-                className="flex flex-col gap-1 group cursor-pointer"
+                whileHover={{ scale: 1.1, y: -5 }}
+                className="relative group cursor-pointer"
               >
-                <span className="text-3xl font-bold text-red-500 group-hover:text-red-400 transition-colors">
-                  {stat.value}
-                </span>
-                <span className="text-sm text-gray-400 font-medium">
-                  {stat.label}
-                </span>
+                {/* Glow Background */}
+                <div className="absolute inset-0 bg-red-500/10 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                
+                <div className="relative glass-effect border border-red-500/30 rounded-2xl p-4 group-hover:border-red-500 transition-all duration-300">
+                  <span className="block text-4xl font-black text-red-500 group-hover:text-white transition-colors mb-2"
+                    style={{
+                      textShadow: '2px 2px 0px rgba(220, 20, 60, 0.4)',
+                    }}
+                  >
+                    {stat.value}
+                  </span>
+                  <span className="block text-xs font-bold text-white uppercase tracking-wider">
+                    {stat.label}
+                  </span>
+                  
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-red-600 to-red-500 group-hover:w-full transition-all duration-500 rounded-b-2xl" />
+                </div>
               </motion.div>
             ))}
           </motion.div>

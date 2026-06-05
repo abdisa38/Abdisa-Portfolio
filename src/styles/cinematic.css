@@ -20,12 +20,13 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Cursor */
-* {
+/* Custom Cursor - Disabled for normal arrow cursor */
+/* * {
   cursor: none;
-}
+} */
 
 .custom-cursor {
+  display: none; /* Hide custom cursor */
   position: fixed;
   width: 20px;
   height: 20px;
@@ -38,6 +39,7 @@ body {
 }
 
 .custom-cursor-dot {
+  display: none; /* Hide custom cursor dot */
   position: fixed;
   width: 6px;
   height: 6px;

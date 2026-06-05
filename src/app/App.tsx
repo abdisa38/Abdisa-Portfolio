@@ -10,7 +10,6 @@ import { Leadership } from "./components/Leadership";
 import { GithubImpact } from "./components/GithubImpact";
 import { Contact } from "./components/Contact";
 import { Navbar } from "./components/Navbar";
-import { CustomCursor } from "./components/CustomCursor";
 import { Spotlight } from "./components/Spotlight";
 import { SmoothScroll } from "./components/SmoothScroll";
 
@@ -19,7 +18,6 @@ export default function App() {
     <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
       <SmoothScroll>
         <div className="min-h-screen bg-black text-white font-sans selection:bg-red-600/30 transition-colors duration-300 relative">
-          <CustomCursor />
           <Spotlight />
           <Navbar />
           <main className="flex flex-col items-center w-full">

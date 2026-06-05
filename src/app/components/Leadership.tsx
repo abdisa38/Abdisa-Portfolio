@@ -7,17 +7,17 @@ export function Leadership() {
     {
       title: "Internship Certificate",
       issuer: "Kuraz Technologies",
-      image: "/images/cert-kuraz.jpg"
+      image: "/src/Assets/Internship Kuraz certificate.jpg"
     },
     {
       title: "Future Startup Founders",
       issuer: "Startup Incubation",
-      image: "/images/cert-startup.jpg"
+      image: "/src/Assets/certificate Future Startup Founders.jpg"
     },
     {
       title: "Entrepreneurship Training",
       issuer: "Global Business Initiative",
-      image: "/images/cert-entrepreneurship.jpg"
+      image: "/src/Assets/certificate Entrepreneurship Training.jpg"
     }
   ];
 
@@ -61,7 +61,7 @@ export function Leadership() {
                 whileHover={{ scale: 1.1, rotate: 10 }}
                 className="w-32 h-32 bg-white rounded-3xl flex items-center justify-center shrink-0 cinematic-shadow overflow-hidden p-4"
               >
-                <img src="/images/ctc-logo.png" alt="CTC Logo" className="w-full h-full object-contain" />
+                <img src="/src/Assets/ctc club logo.jpg" alt="CTC Logo" className="w-full h-full object-contain" />
               </motion.div>
               <div>
                 <motion.div

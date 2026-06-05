@@ -73,7 +73,7 @@ export function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10" />
               <div className="absolute inset-0 bg-red-900/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img 
-                src="/images/profile.jpg"
+                src="/src/Assets/Abdisa Awel profile.jpg"
                 alt="Abdisa Awel Tahir"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
               />

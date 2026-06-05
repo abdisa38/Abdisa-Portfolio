@@ -11,12 +11,12 @@ export function TechStack() {
     },
     {
       name: "Backend",
-      skills: ["Node.js", "Express", "REST APIs", "GraphQL"],
+      skills: ["Node.js", "Express", "REST APIs", "Python"],
       icon: "⚙️",
     },
     {
       name: "Database",
-      skills: ["MongoDB", "PostgreSQL", "Prisma"],
+      skills: ["MongoDB", "MySql", "Postgresql"],
       icon: "🗄️",
     },
     {

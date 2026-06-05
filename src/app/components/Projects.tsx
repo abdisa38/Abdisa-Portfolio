@@ -6,12 +6,22 @@ export function Projects() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const projects = [
+    
+    {
+      title: "CTC Learning Management System",
+      description: "A comprehensive educational platform designed to streamline course delivery, assignments, and student progress tracking for modern institutions.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGVhbiUyMGRhc2hib2FyZCUyMGFuYWx5dGljcyUyMHNjcmVlbnxlbnwxfHx8fDE3ODAzNTQxNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      tags: ["MERN Stack", "Redux", "Heroku", "Socket.io"],
+      metrics: ["Active 21+ users", "79.9% Uptime"],
+      github: "#",
+      demo: "#"
+    },
     {
       title: "EthioLegalAI",
       description: "An AI-powered legal assistant designed to navigate and simplify Ethiopian law. Built to democratize legal access with natural language processing.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGxlZ2FsJTIwc2NhbGVzJTIwZnV0dXJpc3RpYyUyMHRlY2glMjBibHVlfGVufDF8fHx8MTc4MDM1NDE0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       tags: ["Next.js", "TypeScript", "OpenAI", "Prisma"],
-      metrics: ["Reduced research time by 80%", "Processed 10k+ queries"],
+      metrics: ["Reduced research time by 80%", "Processed 2k+ queries"],
       github: "#",
       demo: "#"
     },
@@ -20,19 +30,10 @@ export function Projects() {
       description: "Enterprise security solution for university campus hardware tracking. Features real-time scanning, automated verification, and analytics dashboards.",
       image: "https://images.unsplash.com/photo-1762681829391-74e80741e65f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBzZWN1cml0eSUyMGxvY2slMjBtb2Rlcm4lMjB0ZWNofGVufDF8fHx8MTc4MDM1NDE1MHww&ixlib=rb-4.1.0&q=80&w=1080",
       tags: ["React", "Node.js", "MongoDB", "QR Integration"],
-      metrics: ["Secured 5,000+ devices", "Zero unauthorized exits"],
+      metrics: ["Secured 1,000+ devices", "Zero unauthorized exits"],
       github: "#",
       demo: "#"
     },
-    {
-      title: "CTC Learning Management System",
-      description: "A comprehensive educational platform designed to streamline course delivery, assignments, and student progress tracking for modern institutions.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGVhbiUyMGRhc2hib2FyZCUyMGFuYWx5dGljcyUyMHNjcmVlbnxlbnwxfHx8fDE3ODAzNTQxNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      tags: ["MERN Stack", "Redux", "AWS S3", "Socket.io"],
-      metrics: ["Active 2,000+ users", "99.9% Uptime"],
-      github: "#",
-      demo: "#"
-    }
   ];
 
   return (

@@ -131,7 +131,7 @@ export function CurrentProject() {
                   className="flex items-start gap-3 text-sm"
                 >
                   <div className="w-2 h-2 rounded-full bg-red-500 mt-2 shadow-lg shadow-red-500/50" />
-                  Reduce carbon footprint by eliminating over <span className="text-red-400 font-bold">50,000 paper forms</span>.
+                  Reduce carbon footprint by eliminating over <span className="text-red-400 font-bold">5,000 paper forms</span>.
                 </motion.li>
               </ul>
             </motion.div>

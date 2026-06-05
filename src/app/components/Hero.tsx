@@ -157,7 +157,7 @@ export function Hero() {
                 `
               }}
             >
-              Cinematic
+             serious
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 30 }}
@@ -165,7 +165,7 @@ export function Hero() {
               transition={{ delay: 0.9, duration: 0.8 }}
               className="block"
             >
-              Experiences
+            software.
             </motion.span>
           </h1>
 
@@ -176,7 +176,8 @@ export function Hero() {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="text-lg lg:text-xl text-gray-400 max-w-xl leading-relaxed"
           >
-            Full-Stack Engineer crafting immersive digital solutions with cutting-edge AI, stunning 3D interfaces, and enterprise-grade architecture.
+I am a Full-Stack Software Engineer focused on designing, developing, and deploying robust AI-powered systems and enterprise applications.
+
           </motion.p>
 
           {/* CTA Buttons with Magnetic Effect */}

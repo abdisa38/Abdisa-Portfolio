@@ -189,7 +189,7 @@ I am a Full-Stack Software Engineer focused on designing, developing, and deploy
               <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
             </a>
             <motion.a
-              href="/src/Assets/Abdisa_Awel_Tahir_Resume.pdf"
+              href="/assets/Abdisa_Awel_Tahir_Resume.pdf"
               download="Abdisa_Awel_Tahir_Resume.pdf"
               whileHover={{ scale: 1.05, y: -5 }}
               whileTap={{ scale: 0.95 }}

@@ -10,7 +10,7 @@ export function Projects() {
     {
       title: "CTC Learning Platform",
       description: "A comprehensive educational platform designed to streamline course delivery, assignments, and student progress tracking for modern institutions.",
-      image: "/src/Assets/ctc learning platform.jpg",
+      image: "/assets/ctc learning platform.jpg",
       tags: ["MERN Stack", "Redux", "Heroku", "Socket.io"],
       metrics: ["Active 21+ users", "79.9% Uptime"],
       github: "https://github.com/abdisa38/CTC-Club1.git",
@@ -19,7 +19,7 @@ export function Projects() {
     {
       title: "EthioLegalAI",
       description: "An AI-powered legal assistant designed to navigate and simplify Ethiopian law. Built to democratize legal access with natural language processing.",
-      image: "/src/Assets/EthioLegal Ai photo.jpg",
+      image: "/assets/EthioLegal Ai photo.jpg",
       tags: ["React", "TypeScript","Node js","Express", "GeminiAI", "Prisma"],
       metrics: ["Reduced research time by 80%", "Processed 2k+ queries"],
       github: "https://github.com/abdisa38/EthioLegalAI",
@@ -28,7 +28,7 @@ export function Projects() {
     {
       title: "MWU Laptop Exit Verification",
       description: "Enterprise security solution for university campus hardware tracking. Features real-time scanning, automated verification, and analytics dashboards.",
-      image: "/src/Assets/Laptop exit verification.jpg",
+      image: "/assets/Laptop exit verification.jpg",
       tags: ["React", "Node.js", "MongoDB", "QR Integration"],
       metrics: ["Secured 1,000+ devices", "Zero unauthorized exits"],
       github: "https://github.com/abdisa38/MWU-laptop-exit-verifications.git",

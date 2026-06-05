@@ -55,7 +55,7 @@ export function CurrentProject() {
               Currently Building
             </motion.div>
             
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -147,7 +147,7 @@ export function CurrentProject() {
               <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center">
                 <Rocket className="text-red-500" size={24} />
               </div>
-              <h3 className="text-2xl font-bold text-white">Development Roadmap</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">Development Roadmap</h3>
             </div>
             
             <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-red-500/50 before:to-transparent">

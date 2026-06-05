@@ -79,7 +79,7 @@ export function GithubImpact() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold tracking-tight text-white mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4"
             style={{
               textShadow: '3px 3px 0px rgba(220, 20, 60, 0.3)',
             }}
@@ -97,7 +97,7 @@ export function GithubImpact() {
           </motion.p>
         </div>
 
-        <div className="grid lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12">
           {stats.map((stat, idx) => (
             <motion.div
               key={idx}
@@ -115,8 +115,8 @@ export function GithubImpact() {
                 <div className="w-14 h-14 rounded-2xl bg-red-500/20 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   {stat.icon}
                 </div>
-                <h3 className="text-4xl font-bold text-white mb-2">{stat.value}</h3>
-                <p className="text-sm font-medium text-gray-400">{stat.label}</p>
+                <h3 className="text-3xl sm:text-4xl font-bold text-white mb-2">{stat.value}</h3>
+                <p className="text-xs sm:text-sm font-medium text-gray-400">{stat.label}</p>
               </div>
             </motion.div>
           ))}
@@ -129,7 +129,7 @@ export function GithubImpact() {
           className="glass-effect border-2 border-red-500/30 rounded-3xl p-10 overflow-hidden cinematic-shadow"
         >
           <div className="flex items-center justify-between mb-10 flex-wrap gap-4">
-            <h3 className="font-bold text-white text-2xl flex items-center gap-3">
+            <h3 className="font-bold text-white text-lg sm:text-xl md:text-2xl flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-red-500/20 flex items-center justify-center">
                 <Github size={24} className="text-red-500" />
               </div>

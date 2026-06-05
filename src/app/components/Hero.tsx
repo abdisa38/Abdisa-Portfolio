@@ -25,7 +25,7 @@ export function Hero() {
   const stats = [
     { label: "Years Experience", value: "2+" },
     { label: "Repositories", value: "70+" },
-    { label: "Contributions", value: "1450+" },
+    { label: "Contributions", value: "1500+" },
     { label: "Internship", value: "Completed" },
   ];
 

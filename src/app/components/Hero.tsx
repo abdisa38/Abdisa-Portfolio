@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
-import { ArrowRight, Mail, Terminal, Code2, Database, Zap, Cpu } from "lucide-react";
+import { ArrowRight, Download, Terminal, Code2, Database, Zap, Cpu } from "lucide-react";
 import { useSpring, animated } from '@react-spring/web';
 
 export function Hero() {
@@ -189,11 +189,12 @@ I am a Full-Stack Software Engineer focused on designing, developing, and deploy
               <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
             </a>
             <a
-              href="mailto:abdisaawel82@gmail.com"
+              href="/src/Assets/Abdisa_Awel_Tahir_Resume.pdf"
+              download="Abdisa_Awel_Tahir_Resume.pdf"
               className="group inline-flex items-center justify-center gap-2 glass-effect border-glow text-white px-8 py-4 rounded-xl font-semibold hover-lift"
             >
-              <Mail size={18} className="group-hover:animate-bounce" />
-              Contact Me
+              <Download size={18} className="group-hover:animate-bounce" />
+              Download Resume
             </a>
           </motion.div>
 

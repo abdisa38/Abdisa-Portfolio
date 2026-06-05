@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { Github, ExternalLink, ArrowRight, Sparkles } from "lucide-react";
 
 export function Projects() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   const projects = [
     {
       title: "EthioLegalAI",
@@ -34,18 +36,72 @@ export function Projects() {
   ];
 
   return (
-    <section id="projects" className="w-full py-32 bg-white dark:bg-[#030614]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+    <section id="projects" className="w-full py-32 bg-black relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            linear-gradient(to right, #DC143C 1px, transparent 1px),
+            linear-gradient(to bottom, #DC143C 1px, transparent 1px)
+          `,
+          backgroundSize: '100px 100px',
+        }} />
+      </div>
+
+      <motion.div
+        className="absolute top-20 right-20 w-96 h-96 bg-red-600 rounded-full blur-[150px] opacity-20"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.3, 0.2],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white mb-4">Featured Work</h2>
-            <p className="text-lg text-slate-600 dark:text-slate-400">
-              A selection of enterprise applications and AI systems I've built to solve complex, real-world problems.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-2 mb-4"
+            >
+              <Sparkles className="text-red-500" size={24} />
+              <span className="text-red-500 font-semibold uppercase tracking-wider text-sm">Featured Work</span>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-5xl font-bold tracking-tight text-white mb-4"
+              style={{
+                textShadow: '3px 3px 0px rgba(220, 20, 60, 0.3)',
+              }}
+            >
+              Cinematic Projects
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="text-lg text-gray-400"
+            >
+              Enterprise applications and AI systems crafted with precision and innovation.
+            </motion.p>
           </div>
-          <a href="#" className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:gap-3 transition-all">
-            View All Projects <ArrowRight size={18} />
-          </a>
+          <motion.a
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            href="#"
+            className="group inline-flex items-center gap-2 text-red-500 font-medium hover:gap-4 transition-all"
+          >
+            View All Projects <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+          </motion.a>
         </div>
 
         <div className="flex flex-col gap-24">

@@ -124,7 +124,7 @@ export function Hero() {
           </motion.div>
 
           {/* Main Heading with 3D Effect */}
-          <h1 className="text-6xl lg:text-8xl font-bold tracking-tight text-white leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-white leading-[1.1]">
             <motion.span
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -208,7 +208,7 @@ I am a Full-Stack Software Engineer focused on designing, developing, and deploy
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 0.8 }}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-red-500/20"
+            className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-8 border-t border-red-500/20"
           >
             {stats.map((stat, i) => (
               <motion.div
@@ -218,10 +218,10 @@ I am a Full-Stack Software Engineer focused on designing, developing, and deploy
                 transition={{ delay: 1.7 + i * 0.1, type: "spring" }}
                 className="flex flex-col gap-1 group cursor-pointer"
               >
-                <span className="text-3xl font-bold text-red-500 group-hover:text-red-400 transition-colors">
+                <span className="text-2xl sm:text-3xl font-bold text-red-500 group-hover:text-red-400 transition-colors">
                   {stat.value}
                 </span>
-                <span className="text-sm text-gray-400 font-medium">
+                <span className="text-xs sm:text-sm text-gray-400 font-medium">
                   {stat.label}
                 </span>
               </motion.div>

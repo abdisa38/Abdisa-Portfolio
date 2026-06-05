@@ -43,7 +43,7 @@ export function Experience() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold tracking-tight text-white mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4"
             style={{
               textShadow: '3px 3px 0px rgba(220, 20, 60, 0.3)',
             }}
@@ -100,11 +100,11 @@ export function Experience() {
               viewport={{ once: true }}
               className="w-full sm:w-[45%] sm:pl-12"
             >
-              <div className="glass-effect p-8 rounded-3xl border-2 border-red-500/30 cinematic-shadow hover:border-red-500/50 transition-all duration-500 card-3d group-hover:scale-105">
-                <h3 className="text-3xl font-bold text-white mb-2">
+              <div className="glass-effect p-6 sm:p-8 rounded-3xl border-2 border-red-500/30 cinematic-shadow hover:border-red-500/50 transition-all duration-500 card-3d group-hover:scale-105">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                   Software Engineering Intern
                 </h3>
-                <h4 className="text-xl font-semibold text-red-500 mb-6">
+                <h4 className="text-lg sm:text-xl font-semibold text-red-500 mb-6">
                   Kuraz Technologies
                 </h4>
                 

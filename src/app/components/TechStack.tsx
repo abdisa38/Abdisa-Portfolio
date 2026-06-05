@@ -71,7 +71,7 @@ export function TechStack() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-bold tracking-tight text-white mb-4"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4"
             style={{
               textShadow: '3px 3px 0px rgba(220, 20, 60, 0.3)',
             }}

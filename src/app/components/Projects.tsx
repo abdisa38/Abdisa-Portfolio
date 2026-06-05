@@ -77,7 +77,7 @@ export function Projects() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl font-bold tracking-tight text-white mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-4"
               style={{
                 textShadow: '3px 3px 0px rgba(220, 20, 60, 0.3)',
               }}
@@ -165,7 +165,7 @@ A selection of enterprise applications and AI systems I've built to solve comple
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  <h3 className="text-4xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors"
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors"
                     style={{
                       textShadow: hoveredIndex === idx ? '2px 2px 0px rgba(220, 20, 60, 0.4)' : 'none',
                     }}
@@ -222,13 +222,13 @@ A selection of enterprise applications and AI systems I've built to solve comple
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 }}
-                  className="flex items-center gap-4 pt-2"
+                  className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2"
                 >
                   <motion.a
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                     href={project.demo}
-                    className="group relative inline-flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-xl font-semibold overflow-hidden red-glow-hover"
+                    className="group relative inline-flex items-center justify-center gap-2 bg-red-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold overflow-hidden red-glow-hover text-sm sm:text-base"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       <ExternalLink size={18} />
@@ -239,7 +239,7 @@ A selection of enterprise applications and AI systems I've built to solve comple
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                     href={project.github}
-                    className="group inline-flex items-center gap-2 glass-effect border-glow text-white px-8 py-4 rounded-xl font-semibold"
+                    className="group inline-flex items-center justify-center gap-2 glass-effect border-glow text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base"
                   >
                     <Github size={18} className="group-hover:rotate-12 transition-transform" />
                     Source

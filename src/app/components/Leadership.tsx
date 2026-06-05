@@ -77,7 +77,7 @@ export function Leadership() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  className="text-3xl md:text-4xl font-bold text-white mb-5"
+                  className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-5"
                   style={{
                     textShadow: '2px 2px 0px rgba(220, 20, 60, 0.4)',
                   }}

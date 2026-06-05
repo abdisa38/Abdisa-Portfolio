@@ -56,7 +56,7 @@ export function About() {
                 <User className="text-red-500" size={24} />
                 <span className="text-red-500 font-semibold uppercase tracking-wider text-sm">About Me</span>
               </motion.div>
-              <h2 className="text-4xl font-bold tracking-tight text-white mb-3"
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3"
                 style={{
                   textShadow: '3px 3px 0px rgba(220, 20, 60, 0.3)',
                 }}

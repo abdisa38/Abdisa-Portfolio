@@ -1,81 +1,146 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Award, Users, Star, GraduationCap } from "lucide-react";
+import { Award, Users, Star, GraduationCap, Trophy } from "lucide-react";
 
 export function Leadership() {
   const certifications = [
     {
       title: "Internship Certificate",
       issuer: "Kuraz Technologies",
-      icon: <Award className="text-emerald-500" size={24} />
+      icon: <Award className="text-red-500" size={28} />
     },
     {
       title: "Future Startup Founders",
       issuer: "Startup Incubation",
-      icon: <Star className="text-yellow-500" size={24} />
+      icon: <Star className="text-red-400" size={28} />
     },
     {
       title: "Entrepreneurship Training",
       issuer: "Global Business Initiative",
-      icon: <GraduationCap className="text-blue-500" size={24} />
+      icon: <GraduationCap className="text-red-600" size={28} />
     }
   ];
 
   return (
-    <section className="w-full py-24 bg-slate-50 dark:bg-[#05081c] border-y border-slate-200 dark:border-white/5">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full py-32 bg-black border-y border-red-500/20 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 2px 2px, #DC143C 1px, transparent 0)`,
+          backgroundSize: '50px 50px'
+        }} />
+      </div>
+
+      <motion.div
+        className="absolute bottom-40 right-40 w-[500px] h-[500px] bg-red-600 rounded-full blur-[150px] opacity-20"
+        animate={{
+          scale: [1, 1.3, 1],
+          opacity: [0.2, 0.3, 0.2],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Leadership Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-24"
         >
-          <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-1 relative overflow-hidden shadow-2xl">
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGVhbiUyMGRhc2hib2FyZCUyMGFuYWx5dGljcyUyMHNjcmVlbnxlbnwxfHx8fDE3ODAzNTQxNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080')] opacity-10 bg-cover bg-center mix-blend-overlay" />
-            <div className="bg-white dark:bg-[#0a0f1c] rounded-[1.4rem] p-8 md:p-12 relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-              <div className="w-20 h-20 bg-blue-500/10 rounded-2xl flex items-center justify-center shrink-0">
-                <Users size={40} className="text-blue-600 dark:text-blue-400" />
-              </div>
+          <div className="relative rounded-3xl overflow-hidden">
+            {/* Gradient Border */}
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 via-red-500 to-red-600 rounded-3xl blur opacity-50 group-hover:opacity-75 transition duration-500" />
+            
+            <div className="relative glass-effect border-2 border-red-500/30 rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center gap-10 md:gap-14 cinematic-shadow">
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 10 }}
+                className="w-24 h-24 bg-gradient-to-br from-red-600 to-red-800 rounded-3xl flex items-center justify-center shrink-0 cinematic-shadow"
+              >
+                <Users size={48} className="text-white" />
+              </motion.div>
               <div>
-                <div className="inline-block px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400 text-sm font-bold mb-4 uppercase tracking-wider">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-red-500/30 text-red-500 text-sm font-bold mb-5 uppercase tracking-wider"
+                >
+                  <Trophy size={16} />
                   Leadership
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
+                </motion.div>
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="text-3xl md:text-4xl font-bold text-white mb-5"
+                  style={{
+                    textShadow: '2px 2px 0px rgba(220, 20, 60, 0.4)',
+                  }}
+                >
                   CTC Software Development Leader
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400 text-lg max-w-3xl leading-relaxed">
+                </motion.h3>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="text-gray-400 text-lg max-w-3xl leading-relaxed"
+                >
                   Led a team of developers to architect and implement the CTC Learning Management System. 
                   Responsible for conducting code reviews, establishing best practices, and mentoring junior 
                   developers in MERN stack technologies and modern software engineering principles.
-                </p>
+                </motion.p>
               </div>
             </div>
           </div>
         </motion.div>
 
         {/* Certifications Section */}
+        <div className="text-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center justify-center gap-2 mb-4"
+          >
+            <Award className="text-red-500" size={24} />
+            <span className="text-red-500 font-semibold uppercase tracking-wider text-sm">Certifications</span>
+          </motion.div>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-6">
           {certifications.map((cert, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl p-6 sm:p-8 hover:shadow-xl dark:hover:bg-white/[0.07] transition-all"
+              transition={{ delay: idx * 0.15, type: "spring" }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group relative"
             >
-              <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-[#0a0f1c] flex items-center justify-center mb-6">
-                {cert.icon}
+              {/* Card Glow */}
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-40 transition duration-500" />
+              
+              <div className="relative glass-effect border border-red-500/20 group-hover:border-red-500/50 rounded-3xl p-8 cinematic-shadow transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-black/50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  {cert.icon}
+                </div>
+                <h4 className="text-xl font-bold text-white mb-3">
+                  {cert.title}
+                </h4>
+                <p className="text-gray-400 font-medium">
+                  {cert.issuer}
+                </p>
+
+                {/* Bottom Accent Line */}
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-red-600 to-red-500 group-hover:w-full transition-all duration-500 rounded-b-3xl" />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                {cert.title}
-              </h4>
-              <p className="text-slate-500 dark:text-slate-400 font-medium">
-                {cert.issuer}
-              </p>
             </motion.div>
           ))}
         </div>

@@ -76,7 +76,7 @@ export function Navbar() {
             </motion.button>
             <motion.a
               whileHover={{ scale: 1.1, y: -2 }}
-              href="https://github.com"
+              href="https://github.com/abdisa38"
               target="_blank"
               rel="noreferrer"
               className="text-gray-400 hover:text-red-500 transition-colors"
@@ -85,7 +85,7 @@ export function Navbar() {
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.1, y: -2 }}
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/abdisa-awel"
               target="_blank"
               rel="noreferrer"
               className="text-gray-400 hover:text-red-500 transition-colors"

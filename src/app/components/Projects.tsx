@@ -1,6 +1,6 @@
-import React from "react";
-import { motion } from "motion/react";
-import { Github, ExternalLink, ArrowRight } from "lucide-react";
+import React, { useState } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { Github, ExternalLink, ArrowRight, Sparkles } from "lucide-react";
 
 export function Projects() {
   const projects = [

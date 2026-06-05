@@ -26,58 +26,72 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-white/80 dark:bg-[#030614]/80 backdrop-blur-md border-b border-slate-200 dark:border-white/10 py-3"
+          ? "glass-effect cinematic-shadow py-3"
           : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-tighter flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+        <motion.a 
+          href="#" 
+          className="text-xl font-bold tracking-tighter flex items-center gap-2 group"
+          whileHover={{ scale: 1.05 }}
+        >
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white font-bold text-lg cinematic-shadow group-hover:shadow-red-500/50 transition-all">
             A
           </div>
-          <span>Abdisa.</span>
-        </a>
+          <span className="text-white group-hover:text-red-500 transition-colors">Abdisa.</span>
+        </motion.a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
-            {navLinks.map((link) => (
-              <li key={link.name}>
+          <ul className="flex items-center gap-6 text-sm font-medium">
+            {navLinks.map((link, i) => (
+              <motion.li 
+                key={link.name}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1 }}
+              >
                 <a
                   href={link.href}
-                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="text-gray-300 hover:text-red-500 transition-colors relative group"
                 >
                   {link.name}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300" />
                 </a>
-              </li>
+              </motion.li>
             ))}
           </ul>
           
-          <div className="flex items-center gap-4 border-l border-slate-200 dark:border-white/10 pl-6">
-            <button
+          <div className="flex items-center gap-4 border-l border-red-500/20 pl-6">
+            <motion.button
+              whileHover={{ scale: 1.1, rotate: 180 }}
+              whileTap={{ scale: 0.9 }}
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+              className="text-gray-400 hover:text-red-500 transition-colors"
             >
-              {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-            <a
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </motion.button>
+            <motion.a
+              whileHover={{ scale: 1.1, y: -2 }}
               href="https://github.com"
               target="_blank"
               rel="noreferrer"
-              className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+              className="text-gray-400 hover:text-red-500 transition-colors"
             >
-              <Github size={18} />
-            </a>
-            <a
+              <Github size={20} />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.1, y: -2 }}
               href="https://linkedin.com"
               target="_blank"
               rel="noreferrer"
-              className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors"
+              className="text-gray-400 hover:text-red-500 transition-colors"
             >
-              <Linkedin size={18} />
-            </a>
+              <Linkedin size={20} />
+            </motion.a>
           </div>
         </nav>
 
@@ -85,13 +99,13 @@ export function Navbar() {
         <div className="flex items-center gap-4 md:hidden">
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="text-slate-500 dark:text-slate-400"
+            className="text-gray-400 hover:text-red-500"
           >
             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="text-slate-900 dark:text-white"
+            className="text-white hover:text-red-500 transition-colors"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -103,7 +117,7 @@ export function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="absolute top-full left-0 right-0 bg-white dark:bg-[#05081c] border-b border-slate-200 dark:border-white/10 shadow-xl py-6 px-6 flex flex-col gap-6 md:hidden"
+          className="absolute top-full left-0 right-0 glass-effect border-b border-red-500/20 cinematic-shadow py-6 px-6 flex flex-col gap-6 md:hidden"
         >
           <ul className="flex flex-col gap-4 text-base font-medium">
             {navLinks.map((link) => (
@@ -111,7 +125,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-slate-600 dark:text-slate-300"
+                  className="block text-gray-300 hover:text-red-500 transition-colors"
                 >
                   {link.name}
                 </a>

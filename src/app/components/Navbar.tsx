@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Github, Linkedin, Mail, Menu, X, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Github, Linkedin, Menu, X } from "lucide-react";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,14 +64,6 @@ export function Navbar() {
           </ul>
           
           <div className="flex items-center gap-4 border-l border-red-500/20 pl-6">
-            <motion.button
-              whileHover={{ scale: 1.1, rotate: 180 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="text-gray-400 hover:text-red-500 transition-colors"
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </motion.button>
             <motion.a
               whileHover={{ scale: 1.1, y: -2 }}
               href="https://github.com/abdisa38"
@@ -97,12 +87,6 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="flex items-center gap-4 md:hidden">
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="text-gray-400 hover:text-red-500"
-          >
-            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="text-white hover:text-red-500 transition-colors"

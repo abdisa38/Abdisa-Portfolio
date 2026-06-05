@@ -16,7 +16,7 @@ import { SmoothScroll } from "./components/SmoothScroll";
 
 export default function App() {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
       <SmoothScroll>
         <div className="min-h-screen bg-black text-white font-sans selection:bg-red-600/30 transition-colors duration-300 relative">
           <CustomCursor />

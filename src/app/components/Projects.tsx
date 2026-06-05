@@ -8,9 +8,9 @@ export function Projects() {
   const projects = [
     
     {
-      title: "CTC Learning Management System",
+      title: "CTC Learning Platform",
       description: "A comprehensive educational platform designed to streamline course delivery, assignments, and student progress tracking for modern institutions.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGVhbiUyMGRhc2hib2FyZCUyMGFuYWx5dGljcyUyMHNjcmVlbnxlbnwxfHx8fDE3ODAzNTQxNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/src/Assets/ctc learning platform.jpg",
       tags: ["MERN Stack", "Redux", "Heroku", "Socket.io"],
       metrics: ["Active 21+ users", "79.9% Uptime"],
       github: "https://github.com/abdisa38/CTC-Club1.git",
@@ -19,16 +19,16 @@ export function Projects() {
     {
       title: "EthioLegalAI",
       description: "An AI-powered legal assistant designed to navigate and simplify Ethiopian law. Built to democratize legal access with natural language processing.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGxlZ2FsJTIwc2NhbGVzJTIwZnV0dXJpc3RpYyUyMHRlY2glMjBibHVlfGVufDF8fHx8MTc4MDM1NDE0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/src/Assets/EthioLegal Ai photo.jpg",
       tags: ["React", "TypeScript","Node js","Express", "GeminiAI", "Prisma"],
       metrics: ["Reduced research time by 80%", "Processed 2k+ queries"],
       github: "https://github.com/abdisa38/EthioLegalAI",
       demo: "https://ethio-legal-ai.vercel.app/"
     },
     {
-      title: "MWU Laptop Exit Verification System",
+      title: "MWU Laptop Exit Verification",
       description: "Enterprise security solution for university campus hardware tracking. Features real-time scanning, automated verification, and analytics dashboards.",
-      image: "https://images.unsplash.com/photo-1762681829391-74e80741e65f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBzZWN1cml0eSUyMGxvY2slMjBtb2Rlcm4lMjB0ZWNofGVufDF8fHx8MTc4MDM1NDE1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "/src/Assets/Laptop exit verification.jpg",
       tags: ["React", "Node.js", "MongoDB", "QR Integration"],
       metrics: ["Secured 1,000+ devices", "Zero unauthorized exits"],
       github: "https://github.com/abdisa38/MWU-laptop-exit-verifications.git",

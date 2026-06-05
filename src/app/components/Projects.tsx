@@ -104,60 +104,147 @@ export function Projects() {
           </motion.a>
         </div>
 
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-32">
           {projects.map((project, idx) => (
-            <motion.div 
+            <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              onMouseEnter={() => setHoveredIndex(idx)}
+              onMouseLeave={() => setHoveredIndex(null)}
               className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-20 items-center`}
             >
+              {/* Project Image */}
               <div className="w-full lg:w-1/2">
-                <div className="relative rounded-3xl overflow-hidden bg-slate-100 dark:bg-[#0a0f1c] aspect-[4/3] border border-slate-200 dark:border-white/10 group shadow-2xl">
-                  <div className="absolute inset-0 bg-slate-900/10 dark:bg-white/5 z-10 group-hover:bg-transparent transition-colors duration-500" />
-                  <img 
-                    src={project.image} 
+                <motion.div
+                  className="relative rounded-3xl overflow-hidden aspect-[4/3] group card-3d"
+                  whileHover={{ scale: 1.02 }}
+                  style={{
+                    transform: hoveredIndex === idx ? 'rotateY(5deg) rotateX(5deg)' : 'rotateY(0deg) rotateX(0deg)',
+                    transition: 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  }}
+                >
+                  {/* Red Border Glow */}
+                  <div className="absolute inset-0 border-2 border-red-500/30 rounded-3xl z-10 group-hover:border-red-500 transition-all duration-500" />
+                  
+                  {/* Image Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10" />
+                  <div className="absolute inset-0 bg-red-900/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  
+                  {/* Image */}
+                  <img
+                    src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
-                </div>
-              </div>
-              
-              <div className="w-full lg:w-1/2 flex flex-col gap-6">
-                <h3 className="text-3xl font-bold text-slate-900 dark:text-white">{project.title}</h3>
-                <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                  {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 py-2">
-                  {project.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 bg-blue-50 dark:bg-blue-500/10 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-200 dark:border-blue-500/20">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
 
-                <div className="grid grid-cols-2 gap-4 py-4 border-y border-slate-200 dark:border-white/10 my-2">
+                  {/* Hover Overlay Content */}
+                  <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: hoveredIndex === idx ? 1 : 0 }}
+                      className="glass-effect px-6 py-3 rounded-full border border-red-500/50 text-white font-semibold flex items-center gap-2"
+                    >
+                      <ExternalLink size={18} />
+                      View Project
+                    </motion.div>
+                  </div>
+
+                  {/* Cinematic Shadow */}
+                  <div className="absolute -inset-4 bg-gradient-to-br from-red-600/20 to-transparent blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </motion.div>
+              </div>
+
+              {/* Project Info */}
+              <div className="w-full lg:w-1/2 flex flex-col gap-6">
+                <motion.div
+                  initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                >
+                  <h3 className="text-4xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors"
+                    style={{
+                      textShadow: hoveredIndex === idx ? '2px 2px 0px rgba(220, 20, 60, 0.4)' : 'none',
+                    }}
+                  >
+                    {project.title}
+                  </h3>
+                  <p className="text-lg text-gray-400 leading-relaxed">
+                    {project.description}
+                  </p>
+                </motion.div>
+
+                {/* Tech Tags */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="flex flex-wrap gap-3"
+                >
+                  {project.tags.map((tag, i) => (
+                    <motion.span
+                      key={tag}
+                      initial={{ opacity: 0, scale: 0 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.4 + i * 0.05 }}
+                      whileHover={{ scale: 1.1, y: -2 }}
+                      className="px-4 py-2 glass-effect border border-red-500/30 text-red-400 rounded-full text-sm font-medium hover:border-red-500 hover:bg-red-500/10 transition-all cursor-pointer"
+                    >
+                      {tag}
+                    </motion.span>
+                  ))}
+                </motion.div>
+
+                {/* Metrics */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="grid grid-cols-2 gap-4 py-6 border-y border-red-500/20"
+                >
                   {project.metrics.map((metric, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    <div key={i} className="flex items-center gap-3 text-sm font-medium text-gray-300">
+                      <div className="w-2 h-2 rounded-full bg-red-500 shadow-lg shadow-red-500/50" />
                       {metric}
                     </div>
                   ))}
-                </div>
+                </motion.div>
 
-                <div className="flex items-center gap-4 pt-2">
-                  <a href={project.demo} className="inline-flex items-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 rounded-xl font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
-                    <ExternalLink size={18} />
-                    Live Demo
-                  </a>
-                  <a href={project.github} className="inline-flex items-center gap-2 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white px-6 py-3 rounded-xl font-medium hover:bg-slate-50 dark:hover:bg-white/10 transition-colors">
-                    <Github size={18} />
+                {/* Action Buttons */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.5 }}
+                  className="flex items-center gap-4 pt-2"
+                >
+                  <motion.a
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    href={project.demo}
+                    className="group relative inline-flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-xl font-semibold overflow-hidden red-glow-hover"
+                  >
+                    <span className="relative z-10 flex items-center gap-2">
+                      <ExternalLink size={18} />
+                      Live Demo
+                    </span>
+                  </motion.a>
+                  <motion.a
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    href={project.github}
+                    className="group inline-flex items-center gap-2 glass-effect border-glow text-white px-8 py-4 rounded-xl font-semibold"
+                  >
+                    <Github size={18} className="group-hover:rotate-12 transition-transform" />
                     Source
-                  </a>
-                </div>
+                  </motion.a>
+                </motion.div>
               </div>
             </motion.div>
           ))}

@@ -1,8 +1,34 @@
-import React from "react";
-import { motion } from "motion/react";
-import { ArrowRight, Download, Terminal, Code2, Database, Layout } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { ArrowRight, Download, Terminal, Code2, Database, Zap, Cpu } from "lucide-react";
+import { useSpring, animated } from '@react-spring/web';
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        setMousePosition({
+          x: (e.clientX - rect.left - rect.width / 2) / 20,
+          y: (e.clientY - rect.top - rect.height / 2) / 20,
+        });
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
   const stats = [
     { label: "Years Experience", value: "2+" },
     { label: "Repositories", value: "67+" },
@@ -11,12 +37,71 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background Effects */}
+    <motion.section 
+      ref={sectionRef}
+      style={{ opacity }}
+      className="relative min-h-screen w-full flex items-center justify-center pt-20 overflow-hidden bg-black"
+    >
+      {/* Cinematic Background */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-[20%] left-[20%] w-[40vw] h-[40vw] bg-blue-600/20 rounded-full blur-[120px] mix-blend-screen opacity-50 dark:opacity-30" />
-        <div className="absolute bottom-[10%] right-[10%] w-[30vw] h-[30vw] bg-indigo-500/20 rounded-full blur-[100px] mix-blend-screen opacity-50 dark:opacity-30" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1605379399642-870262d3d051?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtb2Rlcm4lMjBkZXZlbG9wZXIlMjB3b3Jrc3BhY2UlMjBzZXR1cCUyMGNvZGV8ZW58MXx8fHwxNzgwMzU0MTQ2fDA&ixlib=rb-4.1.0&q=80&w=1080')] bg-cover bg-center opacity-5 dark:opacity-[0.03] mix-blend-overlay" />
+        {/* Animated Grid */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(to right, #DC143C 1px, transparent 1px),
+              linear-gradient(to bottom, #DC143C 1px, transparent 1px)
+            `,
+            backgroundSize: '80px 80px',
+          }} />
+        </div>
+        
+        {/* Red Glow Orbs */}
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-red-600 rounded-full blur-[150px]"
+        />
+        <motion.div
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1,
+          }}
+          className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] bg-red-500 rounded-full blur-[130px]"
+        />
+
+        {/* Floating Particles */}
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-red-500 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [-20, 20, -20],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+            }}
+          />
+        ))}
       </div>
 
       <div className="max-w-7xl mx-auto px-6 z-10 w-full grid lg:grid-cols-2 gap-12 items-center">

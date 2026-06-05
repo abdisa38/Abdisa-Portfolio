@@ -22,8 +22,8 @@ export function Projects() {
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGxlZ2FsJTIwc2NhbGVzJTIwZnV0dXJpc3RpYyUyMHRlY2glMjBibHVlfGVufDF8fHx8MTc4MDM1NDE0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
       tags: ["Next.js", "TypeScript", "OpenAI", "Prisma"],
       metrics: ["Reduced research time by 80%", "Processed 2k+ queries"],
-      github: "#",
-      demo: "#"
+      github: "https://github.com/abdisa38/EthioLegalAI",
+      demo: "https://ethiolegal-ai.vercel.app"
     },
     {
       title: "MWU Laptop Exit Verification System",

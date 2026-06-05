@@ -13,8 +13,8 @@ export function Projects() {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjbGVhbiUyMGRhc2hib2FyZCUyMGFuYWx5dGljcyUyMHNjcmVlbnxlbnwxfHx8fDE3ODAzNTQxNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       tags: ["MERN Stack", "Redux", "Heroku", "Socket.io"],
       metrics: ["Active 21+ users", "79.9% Uptime"],
-      github: "#",
-      demo: "#"
+      github: "https://github.com/abdisa38/CTC-Club1.git",
+      demo: "https://www.ctc2026.codes/"
     },
     {
       title: "EthioLegalAI",
@@ -31,8 +31,8 @@ export function Projects() {
       image: "https://images.unsplash.com/photo-1762681829391-74e80741e65f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBzZWN1cml0eSUyMGxvY2slMjBtb2Rlcm4lMjB0ZWNofGVufDF8fHx8MTc4MDM1NDE1MHww&ixlib=rb-4.1.0&q=80&w=1080",
       tags: ["React", "Node.js", "MongoDB", "QR Integration"],
       metrics: ["Secured 1,000+ devices", "Zero unauthorized exits"],
-      github: "https://github.com/abdisa38/CTC-Club1.git",
-      demo: "https://www.ctc2026.codes/"
+      github: "",
+      demo: ""
     },
   ];
 

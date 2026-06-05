@@ -111,7 +111,7 @@ export function CurrentProject() {
                   className="flex items-start gap-3 text-sm"
                 >
                   <div className="w-2 h-2 rounded-full bg-red-500 mt-2 shadow-lg shadow-red-500/50" />
-                  Serve over <span className="text-red-400 font-bold">10,000 graduating students</span> annually.
+                  Serve over <span className="text-red-400 font-bold">1,000 graduating students</span> annually.
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0, x: -20 }}

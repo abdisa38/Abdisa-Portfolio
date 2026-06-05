@@ -4,9 +4,9 @@ import { Github, GitPullRequest, GitCommit, GitBranch, Activity } from "lucide-r
 
 export function GithubImpact() {
   const stats = [
-    { label: "Total Repositories", value: "67+", icon: <Github size={24} /> },
-    { label: "Total Contributions", value: "1450+", icon: <GitCommit size={24} /> },
-    { label: "Pull Requests", value: "120+", icon: <GitPullRequest size={24} /> },
+    { label: "Total Repositories", value: "70+", icon: <Github size={24} /> },
+    { label: "Total Contributions", value: "1500+", icon: <GitCommit size={24} /> },
+    { label: "Pull Requests", value: "56+", icon: <GitPullRequest size={24} /> },
     { label: "Open Source", value: "Ready", icon: <GitBranch size={24} /> },
   ];
 

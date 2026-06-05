@@ -82,7 +82,7 @@ export function Projects() {
                 textShadow: '3px 3px 0px rgba(220, 20, 60, 0.3)',
               }}
             >
-              Cinematic Projects
+              Featured Work
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}
@@ -91,8 +91,7 @@ export function Projects() {
               transition={{ delay: 0.2 }}
               className="text-lg text-gray-400"
             >
-              Enterprise applications and AI systems crafted with precision and innovation.
-            </motion.p>
+A selection of enterprise applications and AI systems I've built to solve complex, real-world problems            </motion.p>
           </div>
           <motion.a
             initial={{ opacity: 0, x: 30 }}

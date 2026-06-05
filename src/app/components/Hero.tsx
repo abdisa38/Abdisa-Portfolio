@@ -104,133 +104,319 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 z-10 w-full grid lg:grid-cols-2 gap-12 items-center">
+      <motion.div 
+        style={{ y }}
+        className="max-w-7xl mx-auto px-6 z-10 w-full grid lg:grid-cols-2 gap-12 items-center"
+      >
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
           className="flex flex-col gap-8"
+          style={{
+            transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+            transition: 'transform 0.2s ease-out',
+          }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-sm font-medium border border-blue-500/20 w-max">
+          {/* Status Badge */}
+          <motion.div 
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.3, type: "spring" }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-red-500/30 text-red-500 text-sm font-medium w-max red-glow"
+          >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
             </span>
             Available for new opportunities
-          </div>
+          </motion.div>
 
-          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-            Building Real-World <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
-              Digital Solutions
-            </span>
+          {/* Main Heading with 3D Effect */}
+          <h1 className="text-6xl lg:text-8xl font-bold tracking-tight text-white leading-[1.1]">
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="block"
+            >
+              Building
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+              className="block neon-red"
+              style={{
+                textShadow: `
+                  0 0 10px #DC143C,
+                  0 0 20px #DC143C,
+                  0 0 30px #DC143C,
+                  0 0 40px #DC143C,
+                  5px 5px 0px rgba(0,0,0,0.7)
+                `
+              }}
+            >
+              Cinematic
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.8 }}
+              className="block"
+            >
+              Experiences
+            </motion.span>
           </h1>
 
-          <p className="text-lg lg:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
-            I design, develop, and deploy scalable web applications, AI-powered systems, and enterprise solutions that make an impact.
-          </p>
+          {/* Description */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="text-lg lg:text-xl text-gray-400 max-w-xl leading-relaxed"
+          >
+            Full-Stack Engineer crafting immersive digital solutions with cutting-edge AI, stunning 3D interfaces, and enterprise-grade architecture.
+          </motion.p>
 
-          <div className="flex flex-wrap items-center gap-4">
+          {/* CTA Buttons with Magnetic Effect */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3, duration: 0.8 }}
+            className="flex flex-wrap items-center gap-4"
+          >
             <a
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 rounded-xl font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
+              className="group relative inline-flex items-center justify-center gap-2 bg-red-600 text-white px-8 py-4 rounded-xl font-semibold overflow-hidden red-glow-hover magnetic-btn"
             >
-              View Projects
-              <ArrowRight size={18} />
+              <span className="relative z-10 flex items-center gap-2">
+                View Projects
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
             </a>
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-2 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white px-6 py-3 rounded-xl font-medium hover:bg-slate-50 dark:hover:bg-white/10 transition-colors"
+              className="group inline-flex items-center justify-center gap-2 glass-effect border-glow text-white px-8 py-4 rounded-xl font-semibold hover-lift"
             >
-              <Download size={18} />
+              <Download size={18} className="group-hover:animate-bounce" />
               Download Resume
             </a>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-slate-200 dark:border-white/10">
+          {/* Stats Grid */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.8 }}
+            className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 border-t border-red-500/20"
+          >
             {stats.map((stat, i) => (
-              <div key={i} className="flex flex-col gap-1">
-                <span className="text-2xl font-bold text-slate-900 dark:text-white">
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.7 + i * 0.1, type: "spring" }}
+                className="flex flex-col gap-1 group cursor-pointer"
+              >
+                <span className="text-3xl font-bold text-red-500 group-hover:text-red-400 transition-colors">
                   {stat.value}
                 </span>
-                <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">
+                <span className="text-sm text-gray-400 font-medium">
                   {stat.label}
                 </span>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
 
+        {/* 3D Code Terminal */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="relative hidden lg:block h-[600px]"
+          initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
+          animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+          transition={{ duration: 1.2, delay: 0.4 }}
+          className="relative hidden lg:block h-[600px] parallax-container"
+          style={{
+            transform: `rotateX(${mousePosition.y / 5}deg) rotateY(${-mousePosition.x / 5}deg)`,
+            transition: 'transform 0.2s ease-out',
+          }}
         >
-          {/* Floating UI Elements */}
+          {/* Floating Tech Icons */}
           <motion.div
-            animate={{ y: [-10, 10, -10] }}
+            animate={{
+              y: [-15, 15, -15],
+              rotateZ: [0, 5, 0],
+            }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[10%] left-[10%] z-20 bg-white dark:bg-[#0a0f1c] p-4 rounded-2xl shadow-2xl border border-slate-200 dark:border-white/10 flex items-center gap-4"
+            className="absolute top-[5%] left-[5%] z-20 glass-effect p-5 rounded-2xl cinematic-shadow border-glow hover-lift"
           >
-            <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500">
-              <Code2 size={20} />
-            </div>
-            <div>
-              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Frontend</p>
-              <p className="text-sm font-bold text-slate-900 dark:text-white">React & Next.js</p>
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center text-white">
+              <Code2 size={24} />
             </div>
           </motion.div>
 
           <motion.div
-            animate={{ y: [10, -10, 10] }}
+            animate={{
+              y: [15, -15, 15],
+              rotateZ: [0, -5, 0],
+            }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-[20%] right-[0%] z-20 bg-white dark:bg-[#0a0f1c] p-4 rounded-2xl shadow-2xl border border-slate-200 dark:border-white/10 flex items-center gap-4"
+            className="absolute bottom-[15%] right-[-5%] z-20 glass-effect p-5 rounded-2xl cinematic-shadow border-glow hover-lift"
           >
-            <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500">
-              <Database size={20} />
-            </div>
-            <div>
-              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Backend</p>
-              <p className="text-sm font-bold text-slate-900 dark:text-white">Node & MongoDB</p>
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white">
+              <Database size={24} />
             </div>
           </motion.div>
 
-          {/* Main Visual */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-cyan-400/20 rounded-[2.5rem] blur-2xl transform rotate-3" />
-          <div className="absolute inset-0 bg-slate-900 dark:bg-[#0a0f1c] rounded-[2rem] border border-slate-800 dark:border-white/10 shadow-2xl overflow-hidden flex flex-col">
-            <div className="h-12 border-b border-white/10 flex items-center px-4 gap-2 bg-slate-800/50 dark:bg-white/5">
-              <div className="flex gap-1.5">
-                <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                <div className="w-3 h-3 rounded-full bg-green-500/80" />
+          <motion.div
+            animate={{
+              y: [10, -10, 10],
+              rotateZ: [0, 3, 0],
+            }}
+            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="absolute top-[40%] right-[15%] z-20 glass-effect p-5 rounded-2xl cinematic-shadow border-glow hover-lift"
+          >
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-red-700 to-red-900 flex items-center justify-center text-white">
+              <Cpu size={24} />
+            </div>
+          </motion.div>
+
+          {/* Main Terminal Card */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-red-600/30 to-red-900/30 rounded-[3rem] blur-3xl transform rotate-6" />
+          <motion.div
+            whileHover={{ scale: 1.02, rotateY: 5 }}
+            className="card-3d relative h-full glass-effect rounded-[2.5rem] cinematic-shadow overflow-hidden flex flex-col"
+            style={{
+              border: '2px solid rgba(220, 20, 60, 0.3)',
+            }}
+          >
+            {/* Terminal Header */}
+            <div className="h-14 border-b border-red-500/20 flex items-center px-6 gap-3 bg-black/60">
+              <div className="flex gap-2">
+                <div className="w-3.5 h-3.5 rounded-full bg-red-500 hover:bg-red-400 transition-colors cursor-pointer" />
+                <div className="w-3.5 h-3.5 rounded-full bg-yellow-500 hover:bg-yellow-400 transition-colors cursor-pointer" />
+                <div className="w-3.5 h-3.5 rounded-full bg-green-500 hover:bg-green-400 transition-colors cursor-pointer" />
               </div>
-              <div className="mx-auto bg-slate-900/50 dark:bg-black/50 px-3 py-1 rounded-md text-xs text-slate-400 font-mono flex items-center gap-2">
-                <Terminal size={12} />
-                abdisa@portfolio:~
+              <div className="mx-auto glass-effect px-4 py-1.5 rounded-lg text-xs text-gray-300 font-mono flex items-center gap-2 border border-red-500/20">
+                <Terminal size={14} className="text-red-500" />
+                abdisa@cinematic:~
               </div>
             </div>
-            <div className="p-6 font-mono text-sm text-slate-300 flex-1 overflow-hidden bg-[#0d1117] relative">
-              <div className="absolute top-0 left-0 w-8 h-full border-r border-white/5 bg-[#0d1117] text-right pr-2 pt-6 text-slate-600 select-none hidden sm:block">
-                1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12
+
+            {/* Terminal Content */}
+            <div className="p-8 font-mono text-sm text-gray-300 flex-1 overflow-hidden bg-black/80 relative">
+              <div className="absolute top-0 left-0 w-10 h-full border-r border-red-500/10 bg-black/60 text-right pr-3 pt-8 text-gray-600 select-none hidden sm:block">
+                {[...Array(15)].map((_, i) => (
+                  <div key={i}>{i + 1}</div>
+                ))}
               </div>
-              <div className="pl-0 sm:pl-10">
-                <p className="text-purple-400">const <span className="text-blue-400">developer</span> = {'{'}</p>
-                <p className="pl-4">name: <span className="text-green-400">'Abdisa Awel Tahir'</span>,</p>
-                <p className="pl-4">role: <span className="text-green-400">'Full-Stack Engineer'</span>,</p>
-                <p className="pl-4">skills: ['<span className="text-yellow-300">React</span>', '<span className="text-yellow-300">Next.js</span>', '<span className="text-yellow-300">Node</span>'],</p>
-                <p className="pl-4">passionateAbout: <span className="text-green-400">'Building AI systems'</span></p>
-                <p>{'};'}</p>
+              <div className="pl-0 sm:pl-12 space-y-1">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.5 }}
+                  className="text-red-400"
+                >
+                  const <span className="text-red-300">developer</span> = {'{'} 
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.7 }}
+                  className="pl-4"
+                >
+                  name: <span className="text-green-400">'Abdisa Awel Tahir'</span>,
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 1.9 }}
+                  className="pl-4"
+                >
+                  role: <span className="text-green-400">'Full-Stack Engineer'</span>,
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 2.1 }}
+                  className="pl-4"
+                >
+                  stack: [<span className="text-yellow-300">'React'</span>, <span className="text-yellow-300">'Node'</span>, <span className="text-yellow-300">'AI'</span>],
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 2.3 }}
+                  className="pl-4"
+                >
+                  passion: <span className="text-green-400">'3D Experiences'</span>,
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 2.5 }}
+                  className="pl-4"
+                >
+                  theme: <span className="text-red-400">'Cinematic'</span>
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 2.7 }}
+                  className="text-red-400"
+                >
+                  {'};'}
+                </motion.p>
                 <br/>
-                <p className="text-purple-400">async function <span className="text-blue-400">init</span>() {'{'}</p>
-                <p className="pl-4 text-slate-500">// Deploying next big thing...</p>
-                <p className="pl-4">await developer.<span className="text-blue-300">build</span>(<span className="text-green-400">'Enterprise App'</span>);</p>
-                <p>{'}'}</p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 2.9 }}
+                  className="text-purple-400"
+                >
+                  async function <span className="text-blue-400">createMagic</span>() {'{'}
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 3.1 }}
+                  className="pl-4 text-gray-500"
+                >
+                  // Deploying cinematic experience...
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 3.3 }}
+                  className="pl-4"
+                >
+                  await developer.<span className="text-blue-300">build</span>(<span className="text-green-400">'NextGen App'</span>);
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 3.5 }}
+                  className="text-purple-400"
+                >
+                  {'}'}
+                </motion.p>
+                <br/>
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: [0, 1, 0] }}
+                  transition={{ delay: 3.7, duration: 1, repeat: Infinity }}
+                  className="flex items-center gap-2"
+                >
+                  <span className="text-red-500">▶</span>
+                  <span className="text-gray-400">Running...</span>
+                  <span className="inline-block w-2 h-4 bg-red-500 animate-pulse ml-1" />
+                </motion.p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 }

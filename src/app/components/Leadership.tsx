@@ -7,17 +7,17 @@ export function Leadership() {
     {
       title: "Internship Certificate",
       issuer: "Kuraz Technologies",
-      icon: <Award className="text-red-500" size={28} />
+      image: "/images/cert-kuraz.jpg"
     },
     {
       title: "Future Startup Founders",
       issuer: "Startup Incubation",
-      icon: <Star className="text-red-400" size={28} />
+      image: "/images/cert-startup.jpg"
     },
     {
       title: "Entrepreneurship Training",
       issuer: "Global Business Initiative",
-      icon: <GraduationCap className="text-red-600" size={28} />
+      image: "/images/cert-entrepreneurship.jpg"
     }
   ];
 
@@ -59,9 +59,9 @@ export function Leadership() {
             <div className="relative glass-effect border-2 border-red-500/30 rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center gap-10 md:gap-14 cinematic-shadow">
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 10 }}
-                className="w-24 h-24 bg-gradient-to-br from-red-600 to-red-800 rounded-3xl flex items-center justify-center shrink-0 cinematic-shadow"
+                className="w-32 h-32 bg-white rounded-3xl flex items-center justify-center shrink-0 cinematic-shadow overflow-hidden p-4"
               >
-                <Users size={48} className="text-white" />
+                <img src="/images/ctc-logo.png" alt="CTC Logo" className="w-full h-full object-contain" />
               </motion.div>
               <div>
                 <motion.div
@@ -122,24 +122,33 @@ export function Leadership() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15, type: "spring" }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative"
+              className="group relative cursor-pointer"
             >
               {/* Card Glow */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-40 transition duration-500" />
               
-              <div className="relative glass-effect border border-red-500/20 group-hover:border-red-500/50 rounded-3xl p-8 cinematic-shadow transition-all duration-500">
-                <div className="w-16 h-16 rounded-2xl bg-black/50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  {cert.icon}
+              <div className="relative glass-effect border border-red-500/20 group-hover:border-red-500/50 rounded-3xl overflow-hidden cinematic-shadow transition-all duration-500">
+                {/* Certificate Image */}
+                <div className="w-full h-64 overflow-hidden">
+                  <img 
+                    src={cert.image} 
+                    alt={cert.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
                 </div>
-                <h4 className="text-xl font-bold text-white mb-3">
-                  {cert.title}
-                </h4>
-                <p className="text-gray-400 font-medium">
-                  {cert.issuer}
-                </p>
+                
+                {/* Certificate Info */}
+                <div className="p-6">
+                  <h4 className="text-xl font-bold text-white mb-2">
+                    {cert.title}
+                  </h4>
+                  <p className="text-gray-400 font-medium">
+                    {cert.issuer}
+                  </p>
+                </div>
 
                 {/* Bottom Accent Line */}
-                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-red-600 to-red-500 group-hover:w-full transition-all duration-500 rounded-b-3xl" />
+                <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-red-600 to-red-500 group-hover:w-full transition-all duration-500" />
               </div>
             </motion.div>
           ))}

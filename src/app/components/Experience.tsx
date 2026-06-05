@@ -75,9 +75,9 @@ export function Experience() {
             {/* Timeline node */}
             <motion.div
               whileHover={{ scale: 1.2, rotate: 180 }}
-              className="hidden sm:flex absolute left-[50%] -translate-x-1/2 w-16 h-16 rounded-2xl glass-effect border-2 border-red-500 items-center justify-center z-10 cinematic-shadow"
+              className="hidden sm:flex absolute left-[50%] -translate-x-1/2 w-20 h-20 rounded-3xl glass-effect border-2 border-red-500 items-center justify-center z-10 cinematic-shadow bg-black/80 p-2 overflow-hidden"
             >
-              <Building2 size={28} className="text-red-500" />
+              <img src="/images/kuraz-logo.png" alt="Kuraz Technologies" className="w-full h-full object-contain" />
             </motion.div>
 
             {/* Date Badge */}

@@ -89,7 +89,7 @@ export function Experience() {
             >
               <div className="inline-flex items-center gap-2 text-sm font-bold text-red-500 glass-effect border border-red-500/30 px-6 py-3 rounded-full red-glow">
                 <Calendar size={18} />
-                2023 - Present
+                2025 - Present
               </div>
             </motion.div>
 

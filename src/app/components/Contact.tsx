@@ -4,10 +4,10 @@ import { Mail, Linkedin, Github, Send, ArrowUpRight, MessageCircle } from "lucid
 
 export function Contact() {
   const links = [
-    { name: "Email", icon: <Mail size={28} />, href: "mailto:hello@example.com", color: "bg-red-500/20 text-red-500" },
-    { name: "LinkedIn", icon: <Linkedin size={28} />, href: "#", color: "bg-red-600/20 text-red-400" },
-    { name: "GitHub", icon: <Github size={28} />, href: "#", color: "bg-red-700/20 text-red-300" },
-    { name: "Telegram", icon: <Send size={28} />, href: "#", color: "bg-red-800/20 text-red-200" },
+    { name: "Email", icon: <Mail size={28} />, href: "mailto:abdisaawel82@gmail.com", color: "bg-red-500/20 text-red-500" },
+    { name: "LinkedIn", icon: <Linkedin size={28} />, href: "https://www.linkedin.com/in/abdisa-awel", color: "bg-red-600/20 text-red-400" },
+    { name: "GitHub", icon: <Github size={28} />, href: "https://github.com/abdisa38", color: "bg-red-700/20 text-red-300" },
+    { name: "Telegram", icon: <Send size={28} />, href: "https://t.me/bdisa38", color: "bg-red-800/20 text-red-200" },
   ];
 
   return (
@@ -85,7 +85,7 @@ export function Contact() {
             transition={{ delay: 0.5, type: "spring" }}
             whileHover={{ scale: 1.05, y: -5 }}
             whileTap={{ scale: 0.95 }}
-            href="mailto:hello@example.com"
+            href="mailto:abdisaawel82@gmail.com"
             className="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-white text-lg transition-all duration-300 bg-red-600 rounded-2xl red-glow-hover mb-20"
           >
             <span className="mr-3">Say Hello</span>

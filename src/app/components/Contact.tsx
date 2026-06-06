@@ -5,7 +5,7 @@ import { Mail, Linkedin, Github, Send, ArrowUpRight, MessageCircle } from "lucid
 export function Contact() {
   const links = [
     { name: "Email", icon: <Mail size={28} />, href: "mailto:abdisaawel82@gmail.com", color: "bg-red-500/20 text-red-500" },
-    { name: "LinkedIn", icon: <Linkedin size={28} />, href: "https://www.linkedin.com/in/abdisa-awel", color: "bg-red-600/20 text-red-400" },
+    { name: "LinkedIn", icon: <Linkedin size={28} />, href: "https://www.linkedin.com/in/abdisa-awel-92b963383/", color: "bg-red-600/20 text-red-400" },
     { name: "GitHub", icon: <Github size={28} />, href: "https://github.com/abdisa38", color: "bg-red-700/20 text-red-300" },
     { name: "Telegram", icon: <Send size={28} />, href: "https://t.me/bdisa38", color: "bg-red-800/20 text-red-200" },
   ];

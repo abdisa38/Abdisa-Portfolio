@@ -167,7 +167,7 @@ export function Hero() {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="text-lg lg:text-xl text-gray-400 max-w-xl leading-relaxed"
           >
-I am a Full-Stack Software Engineer focused on designing, developing, and deploying robust AI-powered systems and enterprise applications.
+Full-Stack Software Engineer focused on designing, developing, and deploying robust AI-powered systems and enterprise applications.
 
           </motion.p>
 

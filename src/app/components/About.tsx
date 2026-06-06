@@ -81,7 +81,7 @@ export function About() {
 
             <div className="space-y-4 text-gray-400 leading-relaxed glass-effect p-6 rounded-2xl border border-red-500/20">
               <p className="text-gray-300">
-                I am a Computer Science student with over 2 years of rigorous experience building production-ready applications from idea to deployment.
+                I am 3rd year Computer Science student with over 2 years of rigorous experience building production-ready applications from idea to deployment.
               </p>
               <p>
                 My focus is on creating scalable architectures, intuitive user interfaces, and integrating AI to solve complex business problems.

@@ -71,7 +71,7 @@ export function Projects() {
               className="flex items-center gap-2 mb-4"
             >
               <Sparkles className="text-red-500" size={24} />
-              <span className="text-red-500 font-semibold uppercase tracking-wider text-sm">Featured Work</span>
+              <span className="text-red-500 font-semibold uppercase tracking-wider text-sm">Projects</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -82,7 +82,7 @@ export function Projects() {
                 textShadow: '3px 3px 0px rgba(220, 20, 60, 0.3)',
               }}
             >
-              Featured Work
+              Featured Projects
             </motion.h2>
             <motion.p
               initial={{ opacity: 0 }}

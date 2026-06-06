@@ -180,13 +180,12 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
           >
             <a
               href="#projects"
-              className="group relative inline-flex items-center justify-center gap-2 bg-red-600 text-white px-8 py-4 rounded-xl font-semibold overflow-hidden red-glow-hover magnetic-btn"
+              className="group relative inline-flex items-center justify-center gap-2 bg-black text-red-500 px-8 py-4 rounded-xl font-semibold overflow-hidden border-2 border-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 magnetic-btn"
             >
               <span className="relative z-10 flex items-center gap-2">
                 View Projects
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
             </a>
             <motion.a
               href="/assets/Abdisa_Awel_Tahir_Resume.pdf"

@@ -1,25 +1,42 @@
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
-import { ArrowRight, Download, Terminal, Code2, Database, Zap, Cpu } from "lucide-react";
-import { useSpring, animated } from '@react-spring/web';
+import React, { useEffect, useRef } from "react";
+import { motion } from "motion/react";
+import { ArrowRight, Download, Terminal, Code2, Database, Cpu } from "lucide-react";
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const leftColRef = useRef<HTMLDivElement>(null);
+  const terminalContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    let rafId: number | null = null;
+    let targetX = 0;
+    let targetY = 0;
+
     const handleMouseMove = (e: MouseEvent) => {
       if (sectionRef.current) {
         const rect = sectionRef.current.getBoundingClientRect();
-        setMousePosition({
-          x: (e.clientX - rect.left - rect.width / 2) / 20,
-          y: (e.clientY - rect.top - rect.height / 2) / 20,
-        });
+        targetX = (e.clientX - rect.left - rect.width / 2) / 25;
+        targetY = (e.clientY - rect.top - rect.height / 2) / 25;
+
+        if (!rafId) {
+          rafId = requestAnimationFrame(() => {
+            if (leftColRef.current) {
+              leftColRef.current.style.transform = `translate3d(${targetX * 0.5}px, ${targetY * 0.5}px, 0)`;
+            }
+            if (terminalContainerRef.current) {
+              terminalContainerRef.current.style.transform = `rotateX(${targetY * 0.4}deg) rotateY(${-targetX * 0.4}deg)`;
+            }
+            rafId = null;
+          });
+        }
       }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   const stats = [
@@ -30,14 +47,14 @@ export function Hero() {
   ];
 
   return (
-    <motion.section 
+    <section 
       ref={sectionRef}
       className="relative min-h-screen w-full flex items-center justify-center pt-20 overflow-hidden bg-black"
     >
-      {/* Cinematic Background */}
-      <div className="absolute inset-0 z-0">
+      {/* Cinematic Background - Optimized GPU Gradients */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
         {/* Animated Grid */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-15">
           <div className="absolute inset-0" style={{
             backgroundImage: `
               linear-gradient(to right, #DC143C 1px, transparent 1px),
@@ -47,67 +64,31 @@ export function Hero() {
           }} />
         </div>
         
-        {/* Red Glow Orbs */}
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-[20%] left-[10%] w-[500px] h-[500px] bg-red-600 rounded-full blur-[150px]"
-        />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] bg-red-500 rounded-full blur-[130px]"
-        />
+        {/* Hardware-Accelerated Glow Layers */}
+        <div className="absolute top-[15%] left-[5%] w-[500px] h-[500px] bg-[radial-gradient(circle,_rgba(220,20,60,0.22)_0%,_transparent_70%)]" />
+        <div className="absolute bottom-[10%] right-[5%] w-[450px] h-[450px] bg-[radial-gradient(circle,_rgba(220,20,60,0.18)_0%,_transparent_70%)]" />
 
         {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
-          <motion.div
+        {[10, 25, 40, 55, 70, 85, 20, 35, 65, 80, 15, 50, 75, 90].map((left, i) => (
+          <div
             key={i}
-            className="absolute w-2 h-2 bg-red-500 rounded-full"
+            className="absolute w-1.5 h-1.5 bg-red-500 rounded-full particle"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [-20, 20, -20],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
+              left: `${left}%`,
+              top: `${(i * 17) % 90 + 5}%`,
+              opacity: 0.6,
+              animationDelay: `${i * 0.3}s`,
             }}
           />
         ))}
       </div>
 
-      <motion.div 
+      <div 
         className="max-w-7xl mx-auto px-6 z-10 w-full grid lg:grid-cols-2 gap-12 items-center"
       >
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex flex-col gap-8"
-          style={{
-            transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-            transition: 'transform 0.2s ease-out',
-          }}
+        <div
+          ref={leftColRef}
+          className="flex flex-col gap-8 will-change-transform"
         >
           {/* Status Badge */}
           <motion.div 
@@ -226,18 +207,12 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
               </motion.div>
             ))}
           </motion.div>
-        </motion.div>
+        </div>
 
         {/* 3D Code Terminal */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, rotateY: -20 }}
-          animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-          transition={{ duration: 1.2, delay: 0.4 }}
-          className="relative hidden lg:block h-[600px] parallax-container"
-          style={{
-            transform: `rotateX(${mousePosition.y / 5}deg) rotateY(${-mousePosition.x / 5}deg)`,
-            transition: 'transform 0.2s ease-out',
-          }}
+        <div
+          ref={terminalContainerRef}
+          className="relative hidden lg:block h-[600px] parallax-container will-change-transform"
         >
           {/* Floating Tech Icons */}
           <motion.div

@@ -6,7 +6,7 @@ export function GithubImpact() {
   const stats = [
     { label: "Total Repositories", value: "90+", icon: <Github size={24} /> },
     { label: "Total Contributions", value: "2500+", icon: <GitCommit size={24} /> },
-    { label: "Pull Requests", value: "56+", icon: <GitPullRequest size={24} /> },
+    { label: "Pull Requests", value: "12+", icon: <GitPullRequest size={24} /> },
     { label: "Open Source", value: "Ready", icon: <GitBranch size={24} /> },
   ];
 

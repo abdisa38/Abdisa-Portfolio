@@ -34,7 +34,7 @@ export function TechStack() {
   return (
     <section id="tech" className="w-full py-32 bg-[#0a0a0a] border-y border-red-500/20 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(to right, #DC143C 1px, transparent 1px),
@@ -44,17 +44,7 @@ export function TechStack() {
         }} />
       </div>
 
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-600 rounded-full blur-[200px] opacity-10"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.1, 0.15, 0.1],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-        }}
-      />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[radial-gradient(circle,_rgba(220,20,60,0.12)_0%,_transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20">

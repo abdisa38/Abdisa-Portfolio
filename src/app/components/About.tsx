@@ -15,7 +15,7 @@ export function About() {
   return (
     <section id="about" className="w-full py-32 bg-black relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(to right, #DC143C 1px, transparent 1px),
@@ -25,17 +25,7 @@ export function About() {
         }} />
       </div>
 
-      <motion.div
-        className="absolute top-40 left-20 w-96 h-96 bg-red-600 rounded-full blur-[150px] opacity-20"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.3, 0.2],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-        }}
-      />
+      <div className="absolute top-40 left-20 w-96 h-96 bg-[radial-gradient(circle,_rgba(220,20,60,0.18)_0%,_transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row gap-16 items-start">
@@ -70,12 +60,14 @@ export function About() {
               whileHover={{ scale: 1.02, rotateY: 5 }}
               className="relative rounded-3xl overflow-hidden aspect-square border-2 border-red-500/30 cinematic-shadow card-3d group"
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10" />
-              <div className="absolute inset-0 bg-red-900/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-red-900/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               <img 
                 src="/assets/Abdisa Awel profile.jpg"
                 alt="Abdisa Awel Tahir"
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
               />
             </motion.div>
 

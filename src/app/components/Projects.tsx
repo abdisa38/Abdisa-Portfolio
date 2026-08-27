@@ -17,13 +17,13 @@ export function Projects() {
       demo: "https://www.ctc2026.codes/"
     },
     {
-      title: "EthioLegalAI",
-      description: "An AI-powered legal assistant designed to navigate and simplify Ethiopian law. Built to democratize legal access with natural language processing.",
+      title: "Addis Kiray",
+      description: "A full-stack rental discovery and property management platform tailored for Addis Ababa, featuring Google Gemini AI-powered natural language property matching, landlord listing workflows, verified trust tiers, and real-time tenant-landlord messaging.",
       image: "/assets/EthioLegal Ai photo.jpg",
-      tags: ["React", "TypeScript","Node js","Express", "GeminiAI", "Prisma"],
-      metrics: ["Reduced research time by 80%", "Processed 2k+ queries"],
-      github: "https://github.com/abdisa38/EthioLegalAI",
-      demo: "https://ethio-legal-ai.vercel.app/"
+      tags: ["React", "TypeScript","Node js","Express", "GeminiAI", "REST API"],
+      metrics: ["28+ Active Properties (Across Bole, Kazanchis, CMC, Sarbet, Piassa, Saris)"],
+      github: "https://github.com/abdisa38/KirayAddis.git",
+      demo: "https://addiskiray.pro.et/"
     },
     {
       title: "MWU Laptop Exit Verification",

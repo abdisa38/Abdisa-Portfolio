@@ -12,7 +12,7 @@ export function Projects() {
       description: "A comprehensive educational platform designed to streamline course delivery, assignments, and student progress tracking for modern institutions.",
       image: "/assets/ctc learning platform.jpg",
       tags: ["MERN Stack", "Redux", "Heroku", "Socket.io"],
-      metrics: ["Active 21+ users", "79.9% Uptime"],
+      metrics: ["Active 80+ users", "79.9% Uptime"],
       github: "https://github.com/abdisa38/CTC-Club1.git",
       demo: "https://www.ctc2026.codes/"
     },

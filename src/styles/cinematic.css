@@ -50,52 +50,54 @@ body {
   box-shadow: 0 0 20px var(--cinematic-red-glow);
 }
 
-/* Glass Morphism */
+/* Glass Morphism - Hardware Accelerated */
 .glass-effect {
-  background: rgba(20, 20, 20, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(220, 20, 60, 0.1);
+  background: rgba(14, 14, 14, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(220, 20, 60, 0.15);
 }
 
-/* Red Glow Effect */
+/* Red Glow Effect - Optimized GPU Layers */
 .red-glow {
-  box-shadow: 0 0 30px var(--cinematic-red-glow),
-              0 0 60px rgba(220, 20, 60, 0.3),
-              0 0 90px rgba(220, 20, 60, 0.1);
+  box-shadow: 0 0 20px var(--cinematic-red-glow),
+              0 0 40px rgba(220, 20, 60, 0.2);
 }
 
 .red-glow-hover {
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  will-change: transform;
 }
 
 .red-glow-hover:hover {
-  box-shadow: 0 0 40px var(--cinematic-red-glow),
-              0 0 80px rgba(220, 20, 60, 0.4),
-              0 0 120px rgba(220, 20, 60, 0.2);
-  transform: translateY(-5px);
+  box-shadow: 0 0 30px var(--cinematic-red-glow),
+              0 0 60px rgba(220, 20, 60, 0.3);
+  transform: translateY(-4px);
 }
 
 /* 3D Card Effect */
 .card-3d {
   transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
 .card-3d:hover {
-  transform: rotateX(5deg) rotateY(5deg) scale(1.02);
+  transform: rotateX(4deg) rotateY(4deg) scale(1.015);
 }
 
 /* Magnetic Button */
 .magnetic-btn {
   position: relative;
   transition: transform 0.2s ease;
+  will-change: transform;
 }
 
 /* Parallax Container */
 .parallax-container {
   transform-style: preserve-3d;
   perspective: 1000px;
+  will-change: transform;
 }
 
 /* Text Glitch Effect */
@@ -127,78 +129,68 @@ body {
 /* Particle Background */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0) translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(-20px) translateX(10px);
+    transform: translate3d(10px, -20px, 0);
   }
 }
 
 .particle {
-  animation: float 3s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
+  will-change: transform;
 }
 
-/* Red Neon Text */
+/* Red Neon Text - High Performance */
 .neon-red {
   color: var(--cinematic-red-bright);
   text-shadow: 
-    0 0 7px var(--cinematic-red-bright),
-    0 0 10px var(--cinematic-red-bright),
-    0 0 21px var(--cinematic-red-bright),
-    0 0 42px var(--cinematic-red),
-    0 0 82px var(--cinematic-red),
-    0 0 92px var(--cinematic-red);
-  animation: neon-flicker 1.5s infinite alternate;
-}
-
-@keyframes neon-flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-    opacity: 1;
-  }
-  20%, 24%, 55% {
-    opacity: 0.9;
-  }
+    0 0 8px var(--cinematic-red-bright),
+    0 0 20px var(--cinematic-red),
+    0 0 35px var(--cinematic-red);
 }
 
 /* Cinematic Shadows */
 .cinematic-shadow {
   box-shadow: 
-    0 10px 40px rgba(0, 0, 0, 0.8),
-    0 20px 60px rgba(0, 0, 0, 0.6),
-    0 30px 80px rgba(0, 0, 0, 0.4),
+    0 10px 30px rgba(0, 0, 0, 0.7),
+    0 20px 50px rgba(0, 0, 0, 0.4),
     inset 0 0 1px rgba(220, 20, 60, 0.2);
 }
 
 /* Hover Lift Effect */
 .hover-lift {
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
 .hover-lift:hover {
-  transform: translateY(-10px) scale(1.02);
-  filter: brightness(1.1);
+  transform: translateY(-8px) scale(1.015);
 }
 
 /* Red Border Glow */
 .border-glow {
   border: 1px solid rgba(220, 20, 60, 0.3);
-  transition: all 0.3s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .border-glow:hover {
   border-color: var(--cinematic-red);
-  box-shadow: inset 0 0 20px rgba(220, 20, 60, 0.1);
+  box-shadow: inset 0 0 15px rgba(220, 20, 60, 0.15);
 }
 
-/* Spotlight Effect */
+/* Spotlight Effect - Hardware Accelerated */
 .spotlight {
   position: fixed;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(220, 20, 60, 0.15) 0%, transparent 70%);
+  width: 500px;
+  height: 500px;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle, rgba(220, 20, 60, 0.12) 0%, transparent 65%);
   pointer-events: none;
   z-index: 1;
-  transition: transform 0.1s ease;
+  will-change: transform;
+  transform: translate3d(-1000px, -1000px, 0);
 }
 
 /* Selection Color */

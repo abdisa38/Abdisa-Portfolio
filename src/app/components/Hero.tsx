@@ -40,10 +40,10 @@ export function Hero() {
   }, []);
 
   const stats = [
-    { label: "Years Experience", value: "2+" },
-    { label: "Repositories", value: "90+" },
-    { label: "Contributions", value: "2500+" },
-    { label: "Internship", value: "Completed" },
+    { label: "Years Experience", value: "3+" },
+    { label: "Repositories", value: "70+" },
+    { label: "Contributions", value: "1500+" },
+    { label: "Leadership", value: "CTC Lead" },
   ];
 
   return (
@@ -148,8 +148,7 @@ export function Hero() {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="text-lg lg:text-xl text-gray-400 max-w-xl leading-relaxed"
           >
-Full-Stack Software Engineer focused on designing, developing, and deploying robust AI-powered systems and enterprise applications.
-
+            Senior-oriented Full-Stack & AI Systems Engineer architecting robust enterprise backends, scalable web architectures, and autonomous AI-driven applications.
           </motion.p>
 
           {/* CTA Buttons with Magnetic Effect */}
@@ -306,7 +305,7 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
                   transition={{ delay: 1.9 }}
                   className="pl-4"
                 >
-                  role: <span className="text-green-400">'Full-Stack developer'</span>,
+                  role: <span className="text-green-400">'Senior Full-Stack & AI Engineer'</span>,
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -314,7 +313,7 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
                   transition={{ delay: 2.1 }}
                   className="pl-4"
                 >
-                  stack: [<span className="text-yellow-300">'React'</span>, <span className="text-yellow-300">'Node'</span>, <span className="text-yellow-300">'AI'</span>],
+                  stack: [<span className="text-yellow-300">'React'</span>, <span className="text-yellow-300">'Node'</span>, <span className="text-yellow-300">'Python'</span>, <span className="text-yellow-300">'AI/LLM'</span>],
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -322,7 +321,7 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
                   transition={{ delay: 2.3 }}
                   className="pl-4"
                 >
-                  passion: <span className="text-green-400">'3D Experiences'</span>,
+                  focus: <span className="text-green-400">'Distributed Systems & AI Agents'</span>,
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -347,7 +346,7 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
                   transition={{ delay: 2.9 }}
                   className="text-purple-400"
                 >
-                  async function <span className="text-blue-400">createMagic</span>() {'{'}
+                  async function <span className="text-blue-400">shipArchitecture</span>() {'{'}
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -355,7 +354,7 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
                   transition={{ delay: 3.1 }}
                   className="pl-4 text-gray-500"
                 >
-                  // Deploying cinematic experience...
+                  // Deploying mission-critical system...
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -363,7 +362,7 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
                   transition={{ delay: 3.3 }}
                   className="pl-4"
                 >
-                  await developer.<span className="text-blue-300">build</span>(<span className="text-green-400">'NextGen App'</span>);
+                  await developer.<span className="text-blue-300">deployProduction</span>(<span className="text-green-400">'HighImpact AI App'</span>);
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0 }}

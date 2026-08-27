@@ -4,12 +4,31 @@ import { User, Code, Award, Briefcase } from "lucide-react";
 
 export function About() {
   const timeline = [
-    { year: "The Beginning", title: "Started Coding", desc: "Discovered a passion for programming and computer science basics." },
-    { year: "Skill Building", title: "Mastering MERN", desc: "Deep dive into MongoDB, Express, React, and Node.js." },
-    { year: "Industry", title: "Software Eng. Internship", desc: "Kuraz Technologies - built real-world enterprise tools." },
-    { year: "Leadership", title: "Tech Leadership", desc: "Led the CTC Software Development team, mentoring peers." },
-    { year: "Production", title: "Real-world Projects", desc: "Deployed multiple applications serving real users." },
-    { year: "Present", title: "AI & Scalable Systems", desc: "Currently building intelligent tools and complex management systems." },
+    { 
+      year: "Freshman - 2nd Year", 
+      title: "Foundations & Bootcamp Immersion", 
+      desc: "Began my software engineering journey at university, completing an intensive 6-month full-stack immersion across the Evangadi Full-Stack Bootcamp and WabiSkills — mastering core computer science, modern JavaScript, and MERN stack architectures." 
+    },
+    { 
+      year: "Industry Summer", 
+      title: "Backend Engineer Intern @ Kuraz Technologies", 
+      desc: "Following bootcamp completion, joined Kuraz Technologies for a 2-month summer backend internship. Engineered high-throughput REST APIs, optimized database queries with a 30% performance boost, and shipped enterprise microservices." 
+    },
+    { 
+      year: "Production Delivery", 
+      title: "Shipping Real-World Applications", 
+      desc: "Delivered multiple production systems with active users, including campus hardware security verification, the CTC LMS platform, and digital enterprise tools." 
+    },
+    { 
+      year: "3rd Year - Present", 
+      title: "CTC Software Development Leader @ MWU", 
+      desc: "Appointed Software Development Leader for the CTC Club at Madda Walabu University. Directing system architecture, conducting code reviews, and mentoring fellow student engineers in production engineering standards." 
+    },
+    { 
+      year: "4th Year & Beyond", 
+      title: "AI Engineering & Autonomous Systems", 
+      desc: "Advanced into specialized AI Engineering via Scrimba's AI Engineer program. Actively architecting large-scale intelligent systems, LLM-powered autonomous agents, vector search pipelines, and cutting-edge software." 
+    },
   ];
 
   return (
@@ -72,11 +91,11 @@ export function About() {
             </motion.div>
 
             <div className="space-y-4 text-gray-400 leading-relaxed glass-effect p-6 rounded-2xl border border-red-500/20">
-              <p className="text-gray-300">
-                I am 4th year Computer Science student with over 2 years of rigorous experience building production-ready applications from idea to deployment.
+              <p className="text-gray-300 font-medium">
+                I am a 4th-year Computer Science student and Full-Stack & AI Systems Engineer with 3+ years of rigorous experience architecting production applications from idea to deployment.
               </p>
               <p>
-                My focus is on creating scalable architectures, intuitive user interfaces, and integrating AI to solve complex business problems.
+                From intensive bootcamps (Evangadi & WabiSkills) to industry backend engineering at Kuraz Technologies, leading MWU's CTC development team, and now mastering AI Engineering on Scrimba — I design and deploy scalable, intelligent software that solves complex real-world problems.
               </p>
             </div>
           </motion.div>

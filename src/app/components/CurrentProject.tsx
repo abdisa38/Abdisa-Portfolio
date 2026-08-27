@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "motion/react";
-import { Clock, CheckCircle2, CircleDashed, Rocket, Target } from "lucide-react";
+import { Sparkles, CheckCircle2, CircleDashed, Rocket, Target } from "lucide-react";
 
 export function CurrentProject() {
   const roadmap = [
-    { title: "Requirements & Architecture", status: "completed" },
-    { title: "Database Schema & API Design", status: "completed" },
-    { title: "Core System Development", status: "in-progress" },
-    { title: "Security & Testing Integration", status: "pending" },
-    { title: "Production Deployment", status: "pending" },
+    { title: "LLM Foundations & Prompt Architecture", status: "completed" },
+    { title: "Vector Embeddings & Semantic Search Pipelines", status: "completed" },
+    { title: "Autonomous AI Agents & Tool Calling Workflows", status: "in-progress" },
+    { title: "Multimodal AI & Speech/Vision Systems", status: "in-progress" },
+    { title: "Large-Scale Enterprise AI Deployment", status: "pending" },
   ];
 
   return (
@@ -36,25 +36,24 @@ export function CurrentProject() {
             className="flex flex-col gap-6"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-red-500/30 text-red-500 text-sm font-semibold w-max red-glow">
-              <Clock size={16} className="animate-pulse" />
-              Currently Building
+              <Sparkles size={16} className="animate-pulse" />
+              Active Specialization & Building
             </div>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-              <span className="block">MWU Clearance</span>
+              <span className="block">AI Engineering &</span>
               <span 
                 className="block text-red-500"
                 style={{
                   textShadow: '3px 3px 0px rgba(220, 20, 60, 0.4), 0 0 30px rgba(220, 20, 60, 0.5)',
                 }}
               >
-                Management System
+                Intelligent Systems
               </span>
             </h2>
             
             <p className="text-lg text-gray-400 leading-relaxed">
-              Digitizing and streamlining the entire university clearance process. 
-              Eliminating paper trails, reducing processing time from weeks to days, and providing real-time tracking for thousands of students and administrative staff.
+              Specializing in Advanced AI Engineering through Scrimba's AI Engineer program while building large-scale, intelligent applications. Architecting LLM-driven workflows, multi-agent autonomous systems, vector search pipelines, and enterprise-grade generative AI platforms.
             </p>
 
             <div className="flex flex-col gap-4 mt-4 glass-effect border border-red-500/30 p-8 rounded-3xl cinematic-shadow group hover:border-red-500/50 transition-all">
@@ -62,20 +61,20 @@ export function CurrentProject() {
                 <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
                   <Target size={20} className="text-red-500" />
                 </div>
-                Projected Impact
+                Core Focus & Engineering Goals
               </div>
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start gap-3 text-sm">
                   <div className="w-2 h-2 rounded-full bg-red-500 mt-2 shadow-lg shadow-red-500/50" />
-                  <span>Serve over <span className="text-red-400 font-bold">1,000 graduating students</span> annually.</span>
+                  <span><strong>Multi-Agent Orchestration</strong> — Autonomous agents executing complex multi-step reasoning, external tool calling, and API integrations.</span>
                 </li>
                 <li className="flex items-start gap-3 text-sm">
                   <div className="w-2 h-2 rounded-full bg-red-500 mt-2 shadow-lg shadow-red-500/50" />
-                  <span>Connect <span className="text-red-400 font-bold">15+ university departments</span> in a unified dashboard.</span>
+                  <span><strong>Enterprise RAG & Semantic Retrieval</strong> — Sub-second hybrid search with vector databases delivering &gt;95% domain precision.</span>
                 </li>
                 <li className="flex items-start gap-3 text-sm">
                   <div className="w-2 h-2 rounded-full bg-red-500 mt-2 shadow-lg shadow-red-500/50" />
-                  <span>Reduce carbon footprint by eliminating over <span className="text-red-400 font-bold">5,000 paper forms</span>.</span>
+                  <span><strong>Full-Stack AI Production</strong> — End-to-end integration of modern LLMs, multimodal models, and resilient cloud microservices.</span>
                 </li>
               </ul>
             </div>
@@ -92,7 +91,7 @@ export function CurrentProject() {
               <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center">
                 <Rocket className="text-red-500" size={24} />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-white">Development Roadmap</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">AI Engineering Roadmap</h3>
             </div>
             
             <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-red-500/50 before:to-transparent">

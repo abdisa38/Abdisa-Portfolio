@@ -20,14 +20,14 @@ export function Projects() {
       title: "Addis Kiray",
       description: "A full-stack rental discovery and property management platform tailored for Addis Ababa, featuring Google Gemini AI-powered natural language property matching, landlord listing workflows, verified trust tiers, and real-time tenant-landlord messaging.",
       image: "/assets/EthioLegal Ai photo.jpg",
-      tags: ["React", "TypeScript","Node js","Express", "GeminiAI", "REST API"],
-      metrics: ["28+ Active Properties (Across Bole, Kazanchis, CMC, Sarbet, Piassa, Saris)"],
+      tags: ["React", "TypeScript","Node js","Express", "GeminiAI", "REST API","JWT","Vercel"],
+      metrics: ["100% Paperless & Instant Verification"],
       github: "https://github.com/abdisa38/KirayAddis.git",
       demo: "https://addiskiray.pro.et/"
     },
     {
-      title: "MWU Laptop Exit Verification",
-      description: "Enterprise security solution for university campus hardware tracking. Features real-time scanning, automated verification, and analytics dashboards.",
+      title: "MWU cms",
+      description: "An enterprise-grade university clearance management and digital certification platform built for Madda Walabu University. Automates a 6-stage multi-desk clearance pipeline with real-time tracking and instant cryptographic QR verification.",
       image: "/assets/Laptop exit verification.jpg",
       tags: ["React", "Node.js", "MongoDB", "QR Integration"],
       metrics: ["Secured 1,000+ devices", "Zero unauthorized exits"],

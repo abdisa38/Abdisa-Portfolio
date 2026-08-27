@@ -1,33 +1,32 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { motion } from "motion/react";
 import { Github, GitPullRequest, GitCommit, GitBranch, Activity } from "lucide-react";
 
 export function GithubImpact() {
   const stats = [
-    { label: "Total Repositories", value: "800+", icon: <Github size={24} /> },
+    { label: "Total Repositories", value: "90+", icon: <Github size={24} /> },
     { label: "Total Contributions", value: "2500+", icon: <GitCommit size={24} /> },
-    { label: "Pull Requests", value: "12+", icon: <GitPullRequest size={24} /> },
+    { label: "Pull Requests", value: "56+", icon: <GitPullRequest size={24} /> },
     { label: "Open Source", value: "Ready", icon: <GitBranch size={24} /> },
   ];
 
-  // Generate a mock contribution graph
-  const generateGraph = () => {
+  // Pre-calculated consistent contribution graph (computed once)
+  const graphData = useMemo(() => {
     const weeks = 52;
     const days = 7;
-    const graph = [];
+    const graph: number[][] = [];
     
     for (let w = 0; w < weeks; w++) {
-      const week = [];
+      const week: number[] = [];
       for (let d = 0; d < days; d++) {
-        const level = Math.random() > 0.6 ? Math.floor(Math.random() * 4) + 1 : 0;
+        const pseudo = ((w * 7 + d) * 9301 + 49297) % 233280 / 233280;
+        const level = pseudo > 0.45 ? (Math.floor(pseudo * 10) % 4) + 1 : 0;
         week.push(level);
       }
       graph.push(week);
     }
     return graph;
-  };
-
-  const graphData = generateGraph();
+  }, []);
 
   const getColor = (level: number) => {
     switch (level) {
@@ -41,8 +40,8 @@ export function GithubImpact() {
 
   return (
     <section className="w-full py-32 bg-[#0a0a0a] relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-5">
+      {/* Background Effects - GPU Accelerated */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(to right, #DC143C 1px, transparent 1px),
@@ -52,17 +51,7 @@ export function GithubImpact() {
         }} />
       </div>
 
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-600 rounded-full blur-[180px] opacity-15"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.15, 0.2, 0.15],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-        }}
-      />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,_rgba(220,20,60,0.14)_0%,_transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
@@ -104,15 +93,15 @@ export function GithubImpact() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, type: "spring" }}
-              whileHover={{ y: -10, scale: 1.05 }}
+              transition={{ delay: idx * 0.08, type: "spring" }}
+              whileHover={{ y: -6, scale: 1.03 }}
               className="group relative"
             >
               {/* Glow Effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-50 transition duration-500" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-40 transition duration-300" />
               
               <div className="relative glass-effect border border-red-500/30 group-hover:border-red-500/50 rounded-3xl p-8 flex flex-col items-center text-center cinematic-shadow transition-all">
-                <div className="w-14 h-14 rounded-2xl bg-red-500/20 text-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-2xl bg-red-500/20 text-red-500 flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
                   {stat.icon}
                 </div>
                 <h3 className="text-3xl sm:text-4xl font-bold text-white mb-2">{stat.value}</h3>
@@ -151,14 +140,9 @@ export function GithubImpact() {
               {graphData.map((week, wIdx) => (
                 <div key={wIdx} className="flex flex-col gap-1.5">
                   {week.map((level, dIdx) => (
-                    <motion.div
+                    <div
                       key={`${wIdx}-${dIdx}`}
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: (wIdx * 0.005) }}
-                      whileHover={{ scale: 1.3 }}
-                      className={`w-3.5 h-3.5 rounded ${getColor(level)} border border-red-500/20 hover:border-red-500 transition-all duration-200 cursor-pointer`}
+                      className={`w-3.5 h-3.5 rounded ${getColor(level)} border border-red-500/20 hover:border-red-500 hover:scale-125 transition-transform duration-150 cursor-pointer`}
                       title={`${level} contributions`}
                     />
                   ))}
@@ -172,7 +156,7 @@ export function GithubImpact() {
             {["JavaScript", "TypeScript", "Python", "Java", "C++"].map(tech => (
               <motion.span
                 key={tech}
-                whileHover={{ scale: 1.1, y: -2 }}
+                whileHover={{ scale: 1.05, y: -2 }}
                 className="flex items-center gap-2 text-sm font-semibold text-gray-300 glass-effect px-4 py-2 rounded-full border border-red-500/20 hover:border-red-500/40 transition-all cursor-pointer"
               >
                 <div className={`w-3 h-3 rounded-full shadow-lg ${

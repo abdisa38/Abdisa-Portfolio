@@ -387,8 +387,8 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
               </div>
             </div>
           </motion.div>
-        </motion.div>
-      </motion.div>
-    </motion.section>
+        </div>
+      </div>
+    </section>
   );
 }

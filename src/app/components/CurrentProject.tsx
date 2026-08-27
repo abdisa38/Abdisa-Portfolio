@@ -29,63 +29,35 @@ export function CurrentProject() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6 }}
             className="flex flex-col gap-6"
           >
-            <motion.div
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring" }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-red-500/30 text-red-500 text-sm font-semibold w-max red-glow"
-            >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-red-500/30 text-red-500 text-sm font-semibold w-max red-glow">
               <Clock size={16} className="animate-pulse" />
               Currently Building
-            </motion.div>
+            </div>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="block"
-              >
-                MWU Clearance
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
+              <span className="block">MWU Clearance</span>
+              <span 
                 className="block text-red-500"
                 style={{
                   textShadow: '3px 3px 0px rgba(220, 20, 60, 0.4), 0 0 30px rgba(220, 20, 60, 0.5)',
                 }}
               >
                 Management System
-              </motion.span>
+              </span>
             </h2>
             
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-lg text-gray-400 leading-relaxed"
-            >
+            <p className="text-lg text-gray-400 leading-relaxed">
               Digitizing and streamlining the entire university clearance process. 
               Eliminating paper trails, reducing processing time from weeks to days, and providing real-time tracking for thousands of students and administrative staff.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col gap-4 mt-4 glass-effect border border-red-500/30 p-8 rounded-3xl cinematic-shadow group hover:border-red-500/50 transition-all"
-            >
+            <div className="flex flex-col gap-4 mt-4 glass-effect border border-red-500/30 p-8 rounded-3xl cinematic-shadow group hover:border-red-500/50 transition-all">
               <div className="flex items-center gap-3 text-white font-bold text-xl mb-2">
                 <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
                   <Target size={20} className="text-red-500" />
@@ -93,44 +65,27 @@ export function CurrentProject() {
                 Projected Impact
               </div>
               <ul className="space-y-4 text-gray-300">
-                <motion.li
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
-                  className="flex items-start gap-3 text-sm"
-                >
+                <li className="flex items-start gap-3 text-sm">
                   <div className="w-2 h-2 rounded-full bg-red-500 mt-2 shadow-lg shadow-red-500/50" />
-                  Serve over <span className="text-red-400 font-bold">1,000 graduating students</span> annually.
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                  className="flex items-start gap-3 text-sm"
-                >
+                  <span>Serve over <span className="text-red-400 font-bold">1,000 graduating students</span> annually.</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm">
                   <div className="w-2 h-2 rounded-full bg-red-500 mt-2 shadow-lg shadow-red-500/50" />
-                  Connect <span className="text-red-400 font-bold">15+ university departments</span> in a unified dashboard.
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.6 }}
-                  className="flex items-start gap-3 text-sm"
-                >
+                  <span>Connect <span className="text-red-400 font-bold">15+ university departments</span> in a unified dashboard.</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm">
                   <div className="w-2 h-2 rounded-full bg-red-500 mt-2 shadow-lg shadow-red-500/50" />
-                  Reduce carbon footprint by eliminating over <span className="text-red-400 font-bold">5,000 paper forms</span>.
-                </motion.li>
+                  <span>Reduce carbon footprint by eliminating over <span className="text-red-400 font-bold">5,000 paper forms</span>.</span>
+                </li>
               </ul>
-            </motion.div>
+            </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: 0.15 }}
             className="glass-effect border-2 border-red-500/30 rounded-3xl p-8 cinematic-shadow card-3d"
           >
             <div className="flex items-center gap-3 mb-8">
@@ -142,12 +97,8 @@ export function CurrentProject() {
             
             <div className="relative space-y-8 before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-red-500/50 before:to-transparent">
               {roadmap.map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
                   className="relative flex items-center group"
                 >
                   <div className="flex items-center justify-center w-11 h-11 rounded-full border-2 border-red-500/30 bg-black shadow-lg shrink-0 relative z-10 group-hover:scale-110 transition-transform">
@@ -168,7 +119,7 @@ export function CurrentProject() {
                       {item.title}
                     </h4>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>

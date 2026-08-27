@@ -84,29 +84,24 @@ export function Contact() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
             {links.map((link, idx) => (
-              <motion.a
+              <a
                 key={idx}
                 href={link.href}
-                initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 + idx * 0.1, type: "spring" }}
-                whileHover={{ y: -10, scale: 1.05 }}
-                className="group relative"
+                className="group relative cursor-pointer"
               >
                 {/* Glow Effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-50 transition duration-500" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-40 transition duration-300 pointer-events-none" />
                 
-                <div className="relative flex flex-col items-center justify-center p-8 rounded-3xl glass-effect border border-red-500/20 group-hover:border-red-500/50 cinematic-shadow transition-all">
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-5 ${link.color} group-hover:scale-110 transition-transform duration-300`}>
+                <div className="relative flex flex-col items-center justify-center p-8 rounded-3xl glass-effect border border-red-500/20 group-hover:border-red-500/50 cinematic-shadow transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03]">
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-5 ${link.color} group-hover:scale-105 transition-transform duration-300`}>
                     {link.icon}
                   </div>
                   <span className="font-bold text-white text-lg">{link.name}</span>
 
                   {/* Bottom Accent Line */}
-                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-red-600 to-red-500 group-hover:w-full transition-all duration-500 rounded-b-3xl" />
+                  <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-red-600 to-red-500 group-hover:w-full transition-all duration-300 rounded-b-3xl" />
                 </div>
-              </motion.a>
+              </a>
             ))}
           </div>
         </motion.div>

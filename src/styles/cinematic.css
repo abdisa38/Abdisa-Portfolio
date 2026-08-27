@@ -10,9 +10,10 @@
   --cinematic-shadow: rgba(0, 0, 0, 0.9);
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+/* Section Viewport Optimization */
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
 }
 
 body {

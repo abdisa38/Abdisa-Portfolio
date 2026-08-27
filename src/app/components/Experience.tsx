@@ -76,26 +76,16 @@ export function Experience() {
             </div>
 
             {/* Date Badge */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full sm:w-[45%] flex sm:justify-end pb-4 sm:pb-0 sm:pr-12"
-            >
+            <div className="w-full sm:w-[45%] flex sm:justify-end pb-4 sm:pb-0 sm:pr-12">
               <div className="inline-flex items-center gap-2 text-sm font-bold text-red-500 glass-effect border border-red-500/30 px-6 py-3 rounded-full red-glow">
                 <Calendar size={18} />
                 2025 - 2026
               </div>
-            </motion.div>
+            </div>
 
             {/* Content Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="w-full sm:w-[45%] sm:pl-12"
-            >
-              <div className="glass-effect p-6 sm:p-8 rounded-3xl border-2 border-red-500/30 cinematic-shadow hover:border-red-500/50 transition-all duration-500 card-3d group-hover:scale-105">
+            <div className="w-full sm:w-[45%] sm:pl-12">
+              <div className="glass-effect p-6 sm:p-8 rounded-3xl border-2 border-red-500/30 cinematic-shadow hover:border-red-500/50 transition-all duration-300 card-3d">
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                   Software Engineering Intern
                 </h3>
@@ -104,39 +94,21 @@ export function Experience() {
                 </h4>
                 
                 <ul className="space-y-4">
-                  <motion.li
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
-                    className="flex items-start gap-3 text-gray-400"
-                  >
+                  <li className="flex items-start gap-3 text-gray-400">
                     <ChevronRight size={20} className="mt-0.5 text-red-500 shrink-0" />
                     <span>Contributed to enterprise-grade web applications using React and Node.js.</span>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="flex items-start gap-3 text-gray-400"
-                  >
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-400">
                     <ChevronRight size={20} className="mt-0.5 text-red-500 shrink-0" />
                     <span>Optimized database queries, <span className="text-red-400 font-bold">improving performance by 30%</span>.</span>
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                    className="flex items-start gap-3 text-gray-400"
-                  >
+                  </li>
+                  <li className="flex items-start gap-3 text-gray-400">
                     <ChevronRight size={20} className="mt-0.5 text-red-500 shrink-0" />
                     <span>Implemented complex UI components from high-fidelity Figma designs.</span>
-                  </motion.li>
+                  </li>
                 </ul>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

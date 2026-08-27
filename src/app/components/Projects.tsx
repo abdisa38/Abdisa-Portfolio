@@ -39,7 +39,7 @@ export function Projects() {
   return (
     <section id="projects" className="w-full py-32 bg-black relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `
             linear-gradient(to right, #DC143C 1px, transparent 1px),
@@ -49,17 +49,7 @@ export function Projects() {
         }} />
       </div>
 
-      <motion.div
-        className="absolute top-20 right-20 w-96 h-96 bg-red-600 rounded-full blur-[150px] opacity-20"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.3, 0.2],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-        }}
-      />
+      <div className="absolute top-20 right-20 w-96 h-96 bg-[radial-gradient(circle,_rgba(220,20,60,0.18)_0%,_transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6">
@@ -118,43 +108,35 @@ A selection of enterprise applications and AI systems I've built to solve comple
             >
               {/* Project Image */}
               <div className="w-full lg:w-1/2">
-                <motion.div
+                <div
                   className="relative rounded-3xl overflow-hidden aspect-[4/3] group card-3d"
-                  whileHover={{ scale: 1.02 }}
-                  style={{
-                    transform: hoveredIndex === idx ? 'rotateY(5deg) rotateX(5deg)' : 'rotateY(0deg) rotateX(0deg)',
-                    transition: 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)',
-                  }}
                 >
                   {/* Red Border Glow */}
-                  <div className="absolute inset-0 border-2 border-red-500/30 rounded-3xl z-10 group-hover:border-red-500 transition-all duration-500" />
+                  <div className="absolute inset-0 border-2 border-red-500/30 rounded-3xl z-10 group-hover:border-red-500 transition-colors duration-300" />
                   
                   {/* Image Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10" />
-                  <div className="absolute inset-0 bg-red-900/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60 z-10 pointer-events-none" />
+                  <div className="absolute inset-0 bg-red-900/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   
                   {/* Image */}
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                   />
 
                   {/* Hover Overlay Content */}
-                  <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: hoveredIndex === idx ? 1 : 0 }}
+                  <div className="absolute inset-0 z-20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div
                       className="glass-effect px-6 py-3 rounded-full border border-red-500/50 text-white font-semibold flex items-center gap-2"
                     >
                       <ExternalLink size={18} />
                       View Project
-                    </motion.div>
+                    </div>
                   </div>
-
-                  {/* Cinematic Shadow */}
-                  <div className="absolute -inset-4 bg-gradient-to-br from-red-600/20 to-transparent blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </motion.div>
+                </div>
               </div>
 
               {/* Project Info */}

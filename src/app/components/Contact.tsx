@@ -13,24 +13,14 @@ export function Contact() {
   return (
     <section id="contact" className="w-full py-32 bg-black border-t border-red-500/20 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 3px 3px, #DC143C 2px, transparent 0)`,
           backgroundSize: '60px 60px'
         }} />
       </div>
 
-      <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-red-600 rounded-full blur-[200px] opacity-20"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.3, 0.2],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-        }}
-      />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[radial-gradient(circle,_rgba(220,20,60,0.18)_0%,_transparent_70%)] pointer-events-none" />
       
       <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
         <motion.div

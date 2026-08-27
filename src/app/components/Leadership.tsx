@@ -24,24 +24,14 @@ export function Leadership() {
   return (
     <section className="w-full py-32 bg-black border-y border-red-500/20 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 2px 2px, #DC143C 1px, transparent 0)`,
           backgroundSize: '50px 50px'
         }} />
       </div>
 
-      <motion.div
-        className="absolute bottom-40 right-40 w-[500px] h-[500px] bg-red-600 rounded-full blur-[150px] opacity-20"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.3, 0.2],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-        }}
-      />
+      <div className="absolute bottom-40 right-40 w-[500px] h-[500px] bg-[radial-gradient(circle,_rgba(220,20,60,0.18)_0%,_transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
@@ -54,15 +44,20 @@ export function Leadership() {
         >
           <div className="relative rounded-3xl overflow-hidden">
             {/* Gradient Border */}
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 via-red-500 to-red-600 rounded-3xl blur opacity-50 group-hover:opacity-75 transition duration-500" />
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 via-red-500 to-red-600 rounded-3xl blur opacity-40 group-hover:opacity-70 transition duration-300 pointer-events-none" />
             
             <div className="relative glass-effect border-2 border-red-500/30 rounded-3xl p-10 md:p-14 flex flex-col md:flex-row items-center gap-10 md:gap-14 cinematic-shadow">
-              <motion.div
-                whileHover={{ scale: 1.1, rotate: 10 }}
-                className="w-32 h-32 bg-white rounded-3xl flex items-center justify-center shrink-0 cinematic-shadow overflow-hidden p-4"
+              <div
+                className="w-32 h-32 bg-white rounded-3xl flex items-center justify-center shrink-0 cinematic-shadow overflow-hidden p-4 hover:scale-105 transition-transform duration-300"
               >
-                <img src="/assets/ctc club logo.jpg" alt="CTC Logo" className="w-full h-full object-contain" />
-              </motion.div>
+                <img 
+                  src="/assets/ctc club logo.jpg" 
+                  alt="CTC Logo" 
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-contain" 
+                />
+              </div>
               <div>
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -120,20 +115,22 @@ export function Leadership() {
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.15, type: "spring" }}
-              whileHover={{ y: -10, scale: 1.02 }}
+              transition={{ delay: idx * 0.1, type: "spring" }}
+              whileHover={{ y: -6, scale: 1.02 }}
               className="group relative cursor-pointer"
             >
               {/* Card Glow */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-40 transition duration-500" />
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-500 rounded-3xl blur opacity-0 group-hover:opacity-40 transition duration-300 pointer-events-none" />
               
-              <div className="relative glass-effect border border-red-500/20 group-hover:border-red-500/50 rounded-3xl overflow-hidden cinematic-shadow transition-all duration-500">
+              <div className="relative glass-effect border border-red-500/20 group-hover:border-red-500/50 rounded-3xl overflow-hidden cinematic-shadow transition-all duration-300">
                 {/* Certificate Image */}
                 <div className="w-full h-64 overflow-hidden">
                   <img 
                     src={cert.image} 
                     alt={cert.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 

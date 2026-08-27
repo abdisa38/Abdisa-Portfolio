@@ -14,7 +14,7 @@ export function CurrentProject() {
   return (
     <section className="w-full py-32 bg-black relative overflow-hidden">
       {/* Background patterns */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div className="absolute inset-0" style={{
           backgroundImage: `
             radial-gradient(circle at 2px 2px, #DC143C 1px, transparent 0)
@@ -23,17 +23,7 @@ export function CurrentProject() {
         }} />
       </div>
 
-      <motion.div
-        className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-red-600 rounded-full blur-[150px] opacity-20"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.2, 0.3, 0.2],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-        }}
-      />
+      <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-[radial-gradient(circle,_rgba(220,20,60,0.18)_0%,_transparent_70%)] pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

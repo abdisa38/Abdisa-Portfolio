@@ -16,17 +16,7 @@ export function Experience() {
         }} />
       </div>
 
-      <motion.div
-        className="absolute top-20 left-1/3 w-96 h-96 bg-red-600 rounded-full blur-[150px] opacity-20"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.25, 0.2],
-        }}
-        transition={{
-          duration: 6,
-          repeat: Infinity,
-        }}
-      />
+      <div className="absolute top-20 left-1/3 w-96 h-96 bg-[radial-gradient(circle,_rgba(220,20,60,0.18)_0%,_transparent_70%)] pointer-events-none" />
 
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
@@ -73,12 +63,17 @@ export function Experience() {
             className="relative flex flex-col sm:flex-row items-center sm:justify-between w-full mb-12 group"
           >
             {/* Timeline node */}
-            <motion.div
-              whileHover={{ scale: 1.2, rotate: 180 }}
-              className="hidden sm:flex absolute left-[50%] -translate-x-1/2 w-20 h-20 rounded-3xl glass-effect border-2 border-red-500 items-center justify-center z-10 cinematic-shadow bg-black/80 p-2 overflow-hidden"
+            <div
+              className="hidden sm:flex absolute left-[50%] -translate-x-1/2 w-20 h-20 rounded-3xl glass-effect border-2 border-red-500 items-center justify-center z-10 cinematic-shadow bg-black/80 p-2 overflow-hidden hover:scale-110 transition-transform duration-300"
             >
-              <img src="/assets/kuraz tech logo.jpg" alt="Kuraz Technologies" className="w-full h-full object-contain rounded-2xl" />
-            </motion.div>
+              <img 
+                src="/assets/kuraz tech logo.jpg" 
+                alt="Kuraz Technologies" 
+                loading="lazy" 
+                decoding="async" 
+                className="w-full h-full object-contain rounded-2xl" 
+              />
+            </div>
 
             {/* Date Badge */}
             <motion.div

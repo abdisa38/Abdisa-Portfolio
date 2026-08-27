@@ -306,7 +306,7 @@ Full-Stack Software Engineer focused on designing, developing, and deploying rob
                   transition={{ delay: 1.9 }}
                   className="pl-4"
                 >
-                  role: <span className="text-green-400">'Full-Stack Engineer'</span>,
+                  role: <span className="text-green-400">'developer'</span>,
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0 }}

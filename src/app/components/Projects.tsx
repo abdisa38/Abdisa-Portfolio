@@ -26,11 +26,12 @@ export function Projects() {
       demo: "https://addiskiray.pro.et/"
     },
     {
-      title: "MWU Clearance Management System",
+      title: "Mwu cms",
       description: "An enterprise-grade university clearance management and digital certification platform built for Madda Walabu University, featuring multi-desk real-time verification pipelines.",
       image: "/assets/mwu cms.jpg",
       tags: ["React", "Node.js", "MongoDB", "QR Integration", "JWT", "Vercel"],
       metrics: ["100% Paperless & Instant Verification"],
+      github: "https://github.com/abdisa38/mwuu-cms-web-based.git",
       demo: "https://mwu-laptop-exit-verifications.vercel.app/"
     },
     {
@@ -39,6 +40,7 @@ export function Projects() {
       image: "/assets/ras hotel.jpg",
       tags: ["React", "Node.js", "MongoDB", "JWT", "Vercel"],
       metrics: ["Luxury Hospitality & Room Booking"],
+      github: "https://github.com/abdisa38/Ras-hotel.git",
       demo: "https://rashotel.pro.et/"
     },
   ];

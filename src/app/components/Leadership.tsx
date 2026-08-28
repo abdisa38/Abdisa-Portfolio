@@ -10,15 +10,16 @@ export function Leadership() {
       image: "/assets/Internship Kuraz certificate.jpg"
     },
     {
+      title: "Fullstack developer certificate",
+      issuer: "Evangadi Tech",
+      image: "/assets/evengadi certficate.jpg"
+    },
+    {
       title: "Future Startup Founders",
       issuer: "Startup Incubation",
       image: "/assets/certificate Future Startup Founders.jpg"
     },
-    {
-      title: "Entrepreneurship Training",
-      issuer: "Global Business Initiative",
-      image: "/assets/certificate Entrepreneurship Training.jpg"
-    }
+ 
   ];
 
   return (

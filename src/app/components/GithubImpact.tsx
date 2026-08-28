@@ -135,7 +135,7 @@ export function GithubImpact() {
             </div>
           </div>
 
-          <div className="w-full overflow-x-auto pb-4">
+          <div className="w-full overflow-x-auto pb-4" data-lenis-prevent>
             <div className="flex gap-1.5 min-w-max">
               {graphData.map((week, wIdx) => (
                 <div key={wIdx} className="flex flex-col gap-1.5">

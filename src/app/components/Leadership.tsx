@@ -12,14 +12,13 @@ export function Leadership() {
     {
       title: "Fullstack developer certificate",
       issuer: "Evangadi Tech",
-      image: "/assets/evengadi certficate.jpg"
+      image: "/assets/evengadi certificate.jpg"
     },
     {
       title: "Future Startup Founders",
       issuer: "Startup Incubation",
       image: "/assets/certificate Future Startup Founders.jpg"
     },
- 
   ];
 
   return (

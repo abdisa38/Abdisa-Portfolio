@@ -10,12 +10,6 @@
   --cinematic-shadow: rgba(0, 0, 0, 0.9);
 }
 
-/* Section Viewport Optimization */
-section {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 700px;
-}
-
 body {
   background: #000000;
   overflow-x: hidden;

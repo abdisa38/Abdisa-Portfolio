@@ -41,13 +41,59 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <motion.a 
           href="#" 
-          className="text-xl font-bold tracking-tighter flex items-center gap-2 group"
-          whileHover={{ scale: 1.05 }}
+          className="flex items-center gap-3 group relative cursor-pointer"
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.98 }}
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white font-bold text-lg cinematic-shadow group-hover:shadow-red-500/50 transition-all">
-            A
+          {/* Custom Tech Emblem */}
+          <div className="relative w-11 h-11 flex items-center justify-center">
+            {/* Ambient Glow */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-red-600 via-red-500 to-red-400 rounded-xl blur-sm opacity-60 group-hover:opacity-100 group-hover:blur-md transition-all duration-300 pointer-events-none" />
+            
+            {/* Emblem Frame */}
+            <div className="relative w-full h-full rounded-xl bg-gradient-to-br from-black via-zinc-950 to-black border border-red-500/50 p-2 flex items-center justify-center shadow-lg group-hover:border-red-400 transition-colors">
+              <svg 
+                viewBox="0 0 32 32" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="w-full h-full text-red-500 group-hover:text-red-400 transition-colors"
+              >
+                <path 
+                  d="M16 4L6 26H11L13.5 20H18.5L21 26H26L16 4Z" 
+                  fill="url(#logo-grad-1)" 
+                />
+                <path 
+                  d="M16 11L14.4 16H17.6L16 11Z" 
+                  fill="#000000" 
+                />
+                <path 
+                  d="M10 20L16 8L22 20" 
+                  stroke="#FF2A55" 
+                  strokeWidth="1.5" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                />
+                <circle cx="16" cy="16" r="1.5" fill="#FFFFFF" />
+                <defs>
+                  <linearGradient id="logo-grad-1" x1="6" y1="4" x2="26" y2="26" gradientUnits="userSpaceOnUse">
+                    <stop stopColor="#FF1E46" />
+                    <stop offset="0.5" stopColor="#DC143C" />
+                    <stop offset="1" stopColor="#8B0000" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
           </div>
-          <span className="text-white group-hover:text-red-500 transition-colors">Abdisa.</span>
+
+          {/* Typography Brandmark */}
+          <div className="flex flex-col">
+            <div className="flex items-center text-lg font-black tracking-tight text-white group-hover:text-white transition-colors">
+              <span>ABDISA</span>
+              <span className="text-red-500 font-mono ml-0.5 group-hover:animate-pulse">.</span>
+              <span className="text-[11px] font-mono font-bold px-1.5 py-0.5 ml-2 rounded-md bg-red-500/10 border border-red-500/30 text-red-400">DEV</span>
+            </div>
+            <span className="text-[10px] tracking-widest uppercase font-mono text-gray-400 -mt-1">Full-Stack & AI</span>
+          </div>
         </motion.a>
 
         {/* Desktop Nav */}

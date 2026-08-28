@@ -40,7 +40,7 @@ export function Hero() {
   }, []);
 
   const stats = [
-    { label: "Years Experience", value: "3+" },
+    { label: "Years Experience", value: "2+" },
     { label: "Repositories", value: "70+" },
     { label: "Contributions", value: "1500+" },
     { label: "Leadership", value: "CTC Lead" },

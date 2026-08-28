@@ -94,9 +94,7 @@ export function About() {
               <p className="text-gray-300 font-medium">
                 I am a 4th-year Computer Science student and Full-Stack & AI Systems Engineer with 3+ years of rigorous experience architecting production applications from idea to deployment.
               </p>
-              <p>
-                From intensive bootcamps (Evangadi & WabiSkills) to industry backend engineering at Kuraz Technologies, leading MWU's CTC development team, and now mastering AI Engineering on Scrimba — I design and deploy scalable, intelligent software that solves complex real-world problems.
-              </p>
+            
             </div>
           </motion.div>
 

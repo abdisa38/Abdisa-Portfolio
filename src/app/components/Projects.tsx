@@ -18,7 +18,7 @@ export function Projects() {
     },
     {
       title: "Addis Kiray",
-      description: "A full-stack rental discovery and property management platform tailored for Addis Ababa.",
+      description: "A full-stack rental discovery and property management platform tailored for Addis Ababa, featuring Google Gemini AI-powered natural language property matching.",
       image: "/assets/EthioLegal Ai photo.jpg",
       tags: ["React", "TypeScript", "Node js", "Express", "GeminiAI", "REST API",],
       metrics: ["28+ Active Properties (Across Bole, Kazanchis, CMC, Sarbet, Piassa, Saris)"],
@@ -27,7 +27,7 @@ export function Projects() {
     },
     {
       title: "MWU cms",
-      description: "An enterprise-grade university clearance management and digital certification platform built for Madda Walabu University.",
+      description: "An enterprise-grade university clearance management and digital certification platform built for Madda Walabu University. ti-desk clearance pipeline with real-time.",
       image: "/assets/Laptop exit verification.jpg",
       tags: ["React", "Node.js", "MongoDB", "QR Integration", "JWT", "Vercel"],
       metrics: ["100% Paperless & Instant Verification"],

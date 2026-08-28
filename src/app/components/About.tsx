@@ -7,14 +7,14 @@ export function About() {
     { 
       year: "Freshman - 2nd Year", 
       title: "Foundations & Bootcamp Immersion", 
-      desc: "Began my software engineering journey at university, completing an intensive 6-month full-stack immersion across the Evangadi Full-Stack Bootcamp and WabiSkills — mastering core computer science, modern JavaScript, and MERN stack architectures." 
+      desc: "Began my software engineering journey at university, completing an intensive 6 month full-stack immersion across the Evangadi Full-Stack Bootcamp and WabiSkills mastering core computer science, modern JavaScript, and MERN stack architectures." 
     },
     { 
       year: "Industry Summer", 
       title: "Backend Engineer Intern @ Kuraz Technologies", 
-      desc: "Following bootcamp completion, joined Kuraz Technologies for a 2-month summer backend internship. Engineered high-throughput REST APIs, optimized database queries with a 30% performance boost, and shipped enterprise microservices." 
+      desc: "Following bootcamp completion, joined Kuraz Technologies for a 2 month summer backend internship. Engineered high-throughput REST APIs, optimized database queries with a 30% performance boost, and shipped enterprise microservices." 
     },
-    
+
     { 
       year: "3rd Year - Present", 
       title: "CTC Software Development Leader @ MWU", 
@@ -23,7 +23,7 @@ export function About() {
     { 
       year: "4th Year & Beyond", 
       title: "AI Engineering & Autonomous Systems", 
-      desc: "Advanced into specialized AI Engineering via Scrimba's AI Engineer program. Actively architecting large-scale intelligent systems, LLM-powered autonomous agents, vector search pipelines, and cutting-edge software." 
+      desc: "Advanced into specialized AI Engineering via Scrimba's AI Engineer program. Actively architecting large scale intelligent systems, LLM powered autonomous agents, vector search pipelines, and cutting edge software." 
     },
   ];
 

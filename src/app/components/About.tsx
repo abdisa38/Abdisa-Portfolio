@@ -14,11 +14,7 @@ export function About() {
       title: "Backend Engineer Intern @ Kuraz Technologies", 
       desc: "Following bootcamp completion, joined Kuraz Technologies for a 2-month summer backend internship. Engineered high-throughput REST APIs, optimized database queries with a 30% performance boost, and shipped enterprise microservices." 
     },
-    { 
-      year: "Production Delivery", 
-      title: "Shipping Real-World Applications", 
-      desc: "Delivered multiple production systems with active users, including campus hardware security verification, the CTC LMS platform, and digital enterprise tools." 
-    },
+    
     { 
       year: "3rd Year - Present", 
       title: "CTC Software Development Leader @ MWU", 

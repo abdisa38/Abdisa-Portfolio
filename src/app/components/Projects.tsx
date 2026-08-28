@@ -33,6 +33,14 @@ export function Projects() {
       metrics: ["100% Paperless & Instant Verification"],
       demo: "https://mwu-laptop-exit-verifications.vercel.app/"
     },
+     {
+      title: "Ras hotel",
+      description: "A modern, luxury hospitality web platform engineered for Asella Ras Hotel & Resort, featuring interactive room reservations, dining & Ethiopian cultural showcases,",
+      image: "/assets/Laptop exit verification.jpg",
+      tags: ["React", "Node.js", "MongoDB", "JWT", "Vercel"],
+      metrics: ["100% Paperless & Instant Verification"],
+      demo: "https://rashotel.pro.et/"
+    },
   ];
 
   return (

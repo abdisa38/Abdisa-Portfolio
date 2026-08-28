@@ -43,7 +43,6 @@ export function Hero() {
     { label: "Years Experience", value: "2+" },
     { label: "Repositories", value: "70+" },
     { label: "Contributions", value: "1500+" },
-    { label: "Leadership", value: "CTC Lead" },
   ];
 
   return (

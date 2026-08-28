@@ -92,7 +92,7 @@ export function About() {
 
             <div className="space-y-4 text-gray-400 leading-relaxed glass-effect p-6 rounded-2xl border border-red-500/20">
               <p className="text-gray-300 font-medium">
-                I am a 4th-year Computer Science student and Full-Stack & AI Systems Engineer with 3+ years of rigorous experience architecting production applications from idea to deployment.
+                I am a 4th-year Computer Science student and Full-Stack & AI Systems Engineer with 2+ years of rigorous experience architecting production applications from idea to deployment.
               </p>
             
             </div>

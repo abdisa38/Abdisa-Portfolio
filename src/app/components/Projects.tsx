@@ -26,12 +26,11 @@ export function Projects() {
       demo: "https://addiskiray.pro.et/"
     },
     {
-      title: "MWU cms",
+      title: "mwu cms",
       description: "An enterprise-grade university clearance management and digital certification platform built for Madda Walabu University. ti-desk clearance pipeline with real-time.",
       image: "/assets/Laptop exit verification.jpg",
       tags: ["React", "Node.js", "MongoDB", "QR Integration", "JWT", "Vercel"],
       metrics: ["100% Paperless & Instant Verification"],
-      github: "https://github.com/abdisa38/MWU-laptop-exit-verifications.git",
       demo: "https://mwu-laptop-exit-verifications.vercel.app/"
     },
   ];

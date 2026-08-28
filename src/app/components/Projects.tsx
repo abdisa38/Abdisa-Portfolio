@@ -10,7 +10,7 @@ export function Projects() {
     {
       title: "CTC Learning Platform",
       description: "A comprehensive educational platform designed to streamline course delivery, assignments, and student progress tracking for modern institutions.",
-      image: "/assets/ctc learning platform.jpg",
+      image: "/Assests/ctc learning platform.jpg",
       tags: ["MERN Stack", "Redux", "Heroku", "Socket.io"],
       metrics: ["Active 80+ users", "79.9% Uptime"],
       github: "https://github.com/abdisa38/CTC-Club1.git",
@@ -19,7 +19,7 @@ export function Projects() {
     {
       title: "Addis Kiray",
       description: "A full-stack rental discovery and property management platform tailored for Addis Ababa, featuring Google Gemini AI-powered natural language property matching.",
-      image: "/assets/EthioLegal Ai photo.jpg",
+      image: "/assets/Addis Kiray.jpg",
       tags: ["React", "TypeScript", "Node js", "Express", "GeminiAI", "REST API",],
       metrics: ["28+ Active Properties (Across Bole, Kazanchis, CMC, Sarbet, Piassa, Saris)"],
       github: "https://github.com/abdisa38/KirayAddis.git",
@@ -28,7 +28,7 @@ export function Projects() {
     {
       title: "Mwu cms",
       description: "An enterprise-grade university clearance management and digital certification platform built for Madda Walabu University. ti-desk clearance pipeline with real-time.",
-      image: "/assets/Laptop exit verification.jpg",
+      image: "/assets/mwu cms.jpg",
       tags: ["React", "Node.js", "MongoDB", "QR Integration", "JWT", "Vercel"],
       metrics: ["100% Paperless & Instant Verification"],
       demo: "https://mwu-laptop-exit-verifications.vercel.app/"
@@ -36,7 +36,7 @@ export function Projects() {
      {
       title: "Ras Hotel",
       description: "A modern, luxury hospitality web platform engineered for Asella Ras Hotel & Resort, featuring interactive room reservations, dining & Ethiopian cultural showcases,",
-      image: "/assets/Laptop exit verification.jpg",
+      image: "/assets/ras hotel.jpg",
       tags: ["React", "Node.js", "MongoDB", "JWT", "Vercel"],
       metrics: ["100% Paperless & Instant Verification"],
       demo: "https://rashotel.pro.et/"

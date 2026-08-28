@@ -26,7 +26,7 @@ export function Projects() {
       demo: "https://addiskiray.pro.et/"
     },
     {
-      title: "mwu cms",
+      title: "Mwu cms",
       description: "An enterprise-grade university clearance management and digital certification platform built for Madda Walabu University. ti-desk clearance pipeline with real-time.",
       image: "/assets/Laptop exit verification.jpg",
       tags: ["React", "Node.js", "MongoDB", "QR Integration", "JWT", "Vercel"],
@@ -34,7 +34,7 @@ export function Projects() {
       demo: "https://mwu-laptop-exit-verifications.vercel.app/"
     },
      {
-      title: "Ras hotel",
+      title: "Ras Hotel",
       description: "A modern, luxury hospitality web platform engineered for Asella Ras Hotel & Resort, featuring interactive room reservations, dining & Ethiopian cultural showcases,",
       image: "/assets/Laptop exit verification.jpg",
       tags: ["React", "Node.js", "MongoDB", "JWT", "Vercel"],

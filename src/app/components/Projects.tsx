@@ -32,7 +32,7 @@ export function Projects() {
       tags: ["React", "Node.js", "MongoDB", "QR Integration", "JWT", "Vercel"],
       metrics: ["100% Paperless & Instant Verification"],
       github: "https://github.com/abdisa38/mwuu-cms-web-based.git",
-      demo: "https://mwu-laptop-exit-verifications.vercel.app/"
+      demo: "https://mwu.pro.et/"
     },
     {
       title: "Ras Hotel",
